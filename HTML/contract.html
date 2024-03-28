@@ -1,0 +1,87 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract</title>
+    <link rel="stylesheet" href="/CSS/contract.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="/HTML/index.html"><img src="/logo/logo.png" alt="Logo"></a>
+        </div>
+        <h1>Welcome to WorkHard</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/HTML/index.html" id="home-link">Home</a></li>
+            <li class="dropdown">
+                <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+                <div id="aboutDropdown" class="dropdown-content">
+                <div class="dropdown-content">
+                    <a href="/HTML/math.html">Math</a>
+                    <a href="/HTML/physics.html">Physics</a>
+                    <a href="/HTML/code.html">Code</a>
+                </div>
+            </li>
+            <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+            <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+            <section id="contact" >
+                <div class="contract-forms">
+                <h2>Contact</h2>
+                <p>Feel free to contact me using the form below:</p>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="category ">Category:</label>
+                    <input type="text" id="category" name="category" required>
+                    <a>Math,Physics,Code,etc.</a><br>
+                    <label for="image">Upload Image:</label>
+                    <input type="file" id="image" name="image"><br> 
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+            </section>
+    
+        <section id="another-way">
+            <h3 class="row-column">Contact us through alternative methods.</h3>
+            <div class="row">
+                <div class="column">Discord: <a href="https://discord.gg/WQNMR8GYzh" target="_blank" class="fab fa-discord">
+                    <a href="https://discord.gg/WQNMR8GYzh" target="_blank">https://discord.gg/WQNMR8GYzh</a>
+                </div>
+                <div class="column">Facebook:<a href="https://www.facebook.com/profile.php?id=61557464755504" target="_blank" class="fab fa-facebook"></a>
+                    <a href="https://www.facebook.com/profile.php?id=61557464755504" target="_blank">https://www.facebook.com/profile.php?id=61557464755504</a>
+                </div>
+                <div class="column">Twitter: <a href="https://twitter.com/WorkHard19x" target="_blank" class="fab fa-twitter" ></a>
+                    <a href="https://twitter.com/WorkHard19x" target="_blank">https://twitter.com/WorkHard19x</a>
+                </div>
+                <div class="column">Gmail: <a class="fab fa-google"></a>
+                    <p>workhard19x@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 WorkHard. All rights reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
