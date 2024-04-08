@@ -7,82 +7,52 @@ showSlides(1);
 startSlideShow();
 // Rest of the code
 
+//pagination
+function generatePagination(currentPage, totalPages, pageURLs) {
+  const paginationContainer = document.getElementById('pagination');
+  paginationContainer.innerHTML = '';
 
+  // Previous Page Link
+  const prevLi = document.createElement('li');
+  const prevA = document.createElement('a');
+  prevA.href = currentPage > 1 ? pageURLs[currentPage - 2] : '#';
+  prevA.textContent = 'Previous';
+  prevLi.appendChild(prevA);
+  paginationContainer.appendChild(prevLi);
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Initialize pagination
-  const totalPages = 100; // Total number of pages
-  const maxPagesToShow = 5; // Maximum number of pages to show in pagination
+  const startPage = Math.max(1, currentPage - 2);
+  const endPage = Math.min(totalPages, startPage + 4);
 
-  // Display initial set of pages
-  showPages(1);
-
-  function showPages(currentPage) {
-      const pagesContainer = document.getElementById('pagination');
-      pagesContainer.innerHTML = ''; // Clear existing content
-
-      let startIndex = Math.max(currentPage - Math.floor(maxPagesToShow / 2), 1);
-      let endIndex = Math.min(startIndex + maxPagesToShow - 1, totalPages);
-
-      if (endIndex - startIndex < maxPagesToShow - 1 && endIndex === totalPages) {
-          startIndex = Math.max(totalPages - maxPagesToShow + 1, 1);
-      }
-
-      for (let i = startIndex; i <= endIndex; i++) {
-          const pageLink = document.createElement('a');
-          pageLink.textContent = i;
-          pageLink.href = `javascript:void(0)`; // Set the href to void to prevent navigation
-          pageLink.classList.add('page');
-          if (i === currentPage) {
-              pageLink.classList.add('active');
-          }
-          pageLink.dataset.page = i; // Store the page number in a custom data attribute
-          pageLink.addEventListener('click', () => {
-              // Remove active class from all page links
-              
-              const allPageLinks = document.querySelectorAll('.page');
-              allPageLinks.forEach(link => link.classList.remove('active'));
-
-              // Set active class to the clicked page link
-              pageLink.classList.add('active');
-              goToPage(currentPage);
-              
-              // Call the goToPage function with the page number
-              
-          });
-          pagesContainer.appendChild(pageLink);
-      }
+  for (let i = startPage; i <= endPage; i++) {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = pageURLs[i - 1]; // Adjust index since pages start from 1
+    a.textContent = i;
+    if (i === currentPage) {
+      li.classList.add('active');
+    }
+    li.appendChild(a);
+    paginationContainer.appendChild(li);
   }
 
-  function goToPage(pageNumber) {
-    // Remove active class from all page links
-    const allPageLinks = document.querySelectorAll('.page');
-    allPageLinks.forEach(link => link.classList.remove('active'));
-  
-    // Set active class to the clicked page link
-    const currentPageLink = document.querySelector(`.page[data-page="${pageNumber}"]`);
-    currentPageLink.classList.add('active');
-  
-    // Construct the page URL and navigate to it
-    const pageURL = `/HTML/mainpage/page${pageNumber}.html`;
-    window.location.href = pageURL;
-  }
+  // Next Page Link
+  const nextLi = document.createElement('li');
+  const nextA = document.createElement('a');
+  nextA.href = currentPage < totalPages ? pageURLs[currentPage] : '#';
+  nextA.textContent = 'Next';
+  nextLi.appendChild(nextA);
+  paginationContainer.appendChild(nextLi);
+}
 
-
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Example usage:
+// Assuming current page is 3 and total pages is 10
+// and pageURLs is an array of URLs for each page
+const pageURLs = [
+  '/HTML/mainpage/page1.html',
+  '/HTML/Index.html',
+  // Add URLs for other pages here
+];
+generatePagination(1, 10, pageURLs);
 
 
 
@@ -129,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     return Math.floor(seconds) + " seconds ago";
   }
-  
 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
@@ -154,7 +123,6 @@ window.onclick = function(event) {
         }
     }
 }
-
 
 function plusSlides(n) {
     // Initialize slideIndex to 1 if it's currently undefined
