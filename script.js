@@ -30,7 +30,14 @@ function generatePagination(currentPage, totalPages, pageURLs) {
     a.textContent = i;
     if (i === currentPage) {
       li.classList.add('active');
+     
     }
+    // a.addEventListener('click', function(event) {
+      
+    //   event.preventDefault(); // Prevent the default behavior of the link
+    //   generatePagination(i, totalPages, pageURLs);
+    // });
+    
     li.appendChild(a);
     paginationContainer.appendChild(li);
   }
@@ -48,11 +55,20 @@ function generatePagination(currentPage, totalPages, pageURLs) {
 // Assuming current page is 3 and total pages is 10
 // and pageURLs is an array of URLs for each page
 const pageURLs = [
-  '/HTML/mainpage/page1.html',
-  '/HTML/Index.html',
+  '/HTML/index.html',
+  '/HTML/mp/2.html',
+  '/HTML/mp/3.html',
+  '/HTML/mp/4.html',
+  '/HTML/mp/5.html',
+  '/HTML/mp/6.html',
+  '/HTML/mp/7.html',
+  '/HTML/mp/8.html',
+  '/HTML/mp/9.html'
+
   // Add URLs for other pages here
 ];
 generatePagination(1, 10, pageURLs);
+
 
 
 

@@ -387,29 +387,6 @@ width: 100%;
 
 }
 
-
-
-/* 
-.page {
-  display: inline-block;
-  padding: 8px 12px;
-  margin: 0 4px;
-  color: #f7f5f5;
-  text-decoration: none;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.page.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-.page:hover {
-  background-color: #f4f4f4;
-} */
-
 .pagination {
   display: flex;
   list-style: none;

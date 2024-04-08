@@ -1,0 +1,449 @@
+body {
+  font-family: Helvetica, sans-serif;
+  /* background-image: url("/assit/background.png"); */
+  background-color: rgb(119, 116, 116);
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  
+}
+
+h1 {
+  color: white;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 25px 20px;
+  border-right: 1px solid #f4f4f4;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+.header .logo {
+  display: block;
+  position: absolute;
+  left: 5px;
+  font-size: 2em;
+  text-decoration: none;  
+
+}
+.header img{
+    width: 60px; /* Adjust the width of the logo */
+    padding: 9px 0px;
+    height: 50px; /* Maintain aspect ratio */
+    border-radius: 25px;
+    align-items: center;
+
+}
+
+/* search */
+/* Style for search bar */
+.search {
+  list-style: none;
+  margin: 0;
+  padding: 18px 12px;
+  display: fixed;
+  align-items: center;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  width: 200px; /* Adjust width as needed */
+}
+
+.search button {
+  padding: 8px 12px;
+  background-color: #52a4fc; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background-color: #0056b3; /* Hover color */
+}
+
+
+
+/* menu */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  float: right;
+  padding: 33px 20px;
+  display: flex;
+  user-select: none;
+}
+
+.header .menu-icon .nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: none;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: transparent;
+  color: rgb(0, 0, 0)505;
+  padding: 25px ;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #fffafa;
+  /* min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(254, 6, 6, 0.2);
+  z-index: 1; */
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.under-nav{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0 0 40px;
+  /* border: 1px solid red; */
+  position:relative;
+  top: 58px;
+  height: auto;
+  
+}
+.under-nav .under-nav-text p{
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 48%;
+  position:relative;
+  top: 20px;
+  height: auto;
+  font-size: 22px;
+  outline-offset: 15px;
+}
+.under-nav .under-nav-text p span{
+  background-image: url("/assit/undernav.jpg")
+}
+
+/* Your existing CSS styles go here */
+
+
+
+
+
+/* undernav */
+.Home-nav{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  background-color: black;
+  border: 1px solid red;
+  height: auto;
+  padding: 75px 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  justify-content: center; /* Adjust as needed */
+ 
+}
+
+.Home-nav .rows{
+  
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items within rows */
+    justify-content: space-between; /* Align items horizontally in the center */
+    width: 100%; /* Ensure rows take up full width */
+
+}
+.Home-nav .columns{
+  flex: 1; /* Ensure equal width for all columns */
+  max-width: 30%; /* Each column takes up maximum 33% of its parent container */
+  margin-bottom: 20px;
+  border: 15px solid white;
+ 
+}
+.Home-nav .columns img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+.Home-nav .rows .columns p{
+  color: white;
+  text-align: left;
+  padding-left: 10px;
+
+}
+.Home-nav .rows .columns span{
+  color: white;
+  text-align: center;
+
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+}
+.pagination li {
+  margin-right: 5px;
+  border: 1px solid rgb(248, 245, 245); /* Border for each pagination number */
+  padding: 10px; /* Padding to create some space around the number */
+}
+.pagination li a {
+  color: rgb(248, 248, 250); /* Default color */
+  text-decoration: none;
+  
+}
+.pagination li a:hover {
+  color: green; /* Color on hover */
+}
+.pagination li.active a {
+  color: rgb(17, 0, 255); /* Color when active */
+}
+
+
+/* 48em = 768px @ 16pt font */
+
+@media (min-width: 1000px) {
+  .header li {
+    float: left;
+  }
+  
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  
+  
+  .header li a {
+    display: block;
+    padding: 25px 25px;
+    border-right: 1px solid #db0b0b;
+    text-decoration: none;
+  }
+  .dropdown-content {
+    display: none;
+    position:relative;
+    background-color: #fd9595;
+  }
+  
+  .Home-nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 94%;
+    background-color: black;
+    border: 1px solid red;
+    height: auto;
+    padding: 85px 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Adjust as needed */
+  
+   
+  }
+  .Home-nav .rows{
+  
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items within rows */
+    justify-content: space-between; /* Align items horizontally in the center */
+    width: 100%; /* Ensure rows take up full width */
+
+  }
+  .Home-nav .columns{
+    flex: 1; /* Ensure equal width for all columns */
+    max-width: 30%; /* Each column takes up maximum 33% of its parent container */
+    margin-bottom: 20px;
+    border: 7px solid white;
+  
+  }
+  .Home-nav .columns img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+  }
+  .Home-nav .rows .columns p{
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 15px;
+
+  }
+  .Home-nav .rows .columns span{
+    color: white;
+    text-align: center;
+
+  }
+
+
+
+  
+}
+@media screen and (max-width: 600px) {
+  .Home-nav{
+    margin-left: auto;
+    margin-right: auto;
+    width: 91.1%;
+    background-color: black;
+    border: 1px solid red;
+    height: auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
+    justify-content: center; /* Adjust as needed */
+  
+   
+  }
+  .Home-nav .rows{
+  
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items within rows */
+    justify-content: space-between; /* Align items horizontally in the center */
+    width: 100%; /* Ensure rows take up full width */
+
+  }
+  .Home-nav .columns{
+    flex: 1; /* Ensure equal width for all columns */
+    max-width: 30%; /* Each column takes up maximum 33% of its parent container */
+    margin-bottom: 20px;
+    border: 7px solid white;
+  
+  }
+  .Home-nav .columns img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+  }
+  .Home-nav .rows .columns p{
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 10px;
+
+  }
+  .Home-nav .rows .columns span{
+    color: white;
+    text-align: center;
+
+  }
+
+
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0px;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+}
