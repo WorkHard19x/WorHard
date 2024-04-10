@@ -101,37 +101,37 @@
 
           <div class="rows">
             <div class="columns">
-              <a href=""class="post-title" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
+              <a href="/HTML/mp/2.html"class="post-title" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-26T16:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
+              <a href="/HTML/mp/3.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 2"><p >lonely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
+              <a href="/HTML/mp/4.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 3"><p >killy <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
         </div>
         <!-- Second Row -->
         <div class="rows">
             <div class="columns">
-              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 4"><p >Hopely <br> 
+              <a href="/HTML/mp/5.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 4"><p >eachdy <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
+              <a href="/HTML/mp/6.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
+              <a href="/HTML/mp/7.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
               <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
         </div>
       
         
         
-        <script>
+        <!-- <script>
           function searchPosts() {
             var input, filter;
             input = document.getElementById('searchInput');
@@ -147,7 +147,42 @@
             // Redirect to the search results page with the search query and titles as parameters
             window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles));
           }
-          </script>
+          </script> -->
+
+
+
+
+          <script>
+            function searchPosts() {
+              var input, filter;
+              input = document.getElementById('searchInput');
+              filter = input.value.trim();
+            
+              // Get all post titles and image sources
+              var posts = document.querySelectorAll('.columns');
+              var titles = [];
+              var AHerfs = [];
+              var imageSrcs = [];
+              posts.forEach(function(post) {
+                var pElement = post.querySelector('.post-title p');
+                var title = pElement.textContent.trim();
+                var imgElement = post.querySelector('img');
+                var imgSrc = imgElement.getAttribute('src');
+                titles.push(title);
+                imageSrcs.push(imgSrc);
+              });
+            
+              // Redirect to the search results page with the search query, titles, and image sources as parameters
+              window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles)) + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs))+ '&AHerfs=' + encodeURIComponent(JSON.stringify(AHerfs));
+            }
+            </script>
+            
+
+
+
+
+
+
 
 
 
