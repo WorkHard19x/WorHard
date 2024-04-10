@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Results</title>
+<style>
+  .search-results-container {
+    width: 60%; 
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px ;
+    border: 1px solid blue;
+    position: relative;
+    justify-content: center; 
+   
+  }
+  .search-result {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding: 30px 40px; 
+    flex-wrap: wrap;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #fa0909; /* Add border to each search result */
+    justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="search-results-container">
+  
+  <div id="searchResults">
+    <!-- Search results will appear here -->
+  </div>
+</div>
+
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function() {
+  var queryString = window.location.search;
+  var urlParams = new URLSearchParams(queryString);
+  var searchQuery = urlParams.get('q');
+  var titles = JSON.parse(urlParams.get('titles'));
+
+  if (searchQuery) {
+    searchPosts(searchQuery, titles);
+  } else {
+    // Display a message if no search query is provided
+    displayNoQueryMessage();
+  }
+});
+
+function searchPosts(query, titles) {
+  var filter = query.toUpperCase();
+  var matchingTitles = [];
+
+  // Loop through all post titles and find matching ones
+  for (var i = 0; i < titles.length; i++) {
+    if (titles[i].toUpperCase().includes(filter)) {
+      matchingTitles.push(titles[i]);
+    }
+  }
+
+  // Display the search results
+  displaySearchResults(matchingTitles);
+}
+
+function displaySearchResults(titles) {
+  var searchResultsDiv = document.getElementById('searchResults');
+  searchResultsDiv.innerHTML = '';
+
+  if (titles.length === 0) {
+    searchResultsDiv.innerHTML = '<p>No results found.</p>';
+  } else {
+    titles.forEach(function(title) {
+      var div = document.createElement('div');
+      div.classList.add('search-result');
+
+      var img = document.createElement('img');
+      img.src = title.imageSrc; // Assuming each title object has an 'imageSrc' property
+      div.appendChild(img);
+
+      var p = document.createElement('p');
+      p.textContent = title.title; // Assuming each title object has a 'title' property
+      div.appendChild(p);
+
+      searchResultsDiv.appendChild(div);
+    });
+  }
+}
+
+function displayNoQueryMessage() {
+  var searchResultsDiv = document.getElementById('searchResults');
+  searchResultsDiv.innerHTML = '<p>No search query provided.</p>';
+}
+</script> -->
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var searchQuery = urlParams.get('q');
+    var titles = JSON.parse(urlParams.get('titles'));
+  
+    if (searchQuery) {
+      searchPosts(searchQuery, titles);
+    } else {
+      // Display a message if no search query is provided
+      displayNoQueryMessage();
+    }
+  });
+  
+  function searchPosts(query, titles) {
+    var filter = query.toUpperCase();
+    var matchingTitles = [];
+  
+    // Loop through all post titles and find matching ones
+    for (var i = 0; i < titles.length; i++) {
+      if (titles[i].toUpperCase().includes(filter)) {
+        matchingTitles.push(titles[i]);
+      }
+    }
+  
+    // Display the search results
+    displaySearchResults(matchingTitles);
+  }
+  
+  function displaySearchResults(titles) {
+    var searchResultsDiv = document.getElementById('searchResults');
+    searchResultsDiv.innerHTML = '';
+  
+    if (titles.length === 0) {
+      searchResultsDiv.innerHTML = '<p>No results found.</p>';
+    } else {
+      titles.forEach(function(title) {
+        var div = document.createElement('div');
+        div.classList.add('search-result');
+        div.textContent = title;
+  
+        var img = document.createElement('img');
+        img.src = title.imageSrc;
+        div.appendChild(img);
+        
+        searchResultsDiv.appendChild(div);
+      });
+    }
+  }
+  
+  function displayNoQueryMessage() {
+    var searchResultsDiv = document.getElementById('searchResults');
+    searchResultsDiv.innerHTML = '<p>No search query provided.</p>';
+  }
+  </script>
+
+
+
+
+
+
+
+
+</body>
+</html>

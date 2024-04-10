@@ -7,6 +7,13 @@ showSlides(1);
 startSlideShow();
 // Rest of the code
 
+
+
+
+
+
+
+
 //pagination
 function generatePagination(currentPage, totalPages, pageURLs) {
   const paginationContainer = document.getElementById('pagination');
@@ -70,8 +77,6 @@ const pageURLs = [
 generatePagination(1, 10, pageURLs);
 
 
-
-
 document.addEventListener("DOMContentLoaded", function() {
     updateTimeAgo();
     setInterval(updateTimeAgo, 60000); // Update every minute
@@ -116,11 +121,7 @@ document.addEventListener("DOMContentLoaded", function() {
     return Math.floor(seconds) + " seconds ago";
   }
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    // You can add code here to handle form submission, like sending data to a server or showing a success message.
-    alert('Form submitted successfully!');
-});
+
 
 function toggleDropdown() {
     var dropdownContent = document.getElementById("aboutDropdown");

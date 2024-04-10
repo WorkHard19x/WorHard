@@ -81,7 +81,13 @@
     <footer>
         <p>&copy; 2024 WorkHard. All rights reserved.</p>
     </footer>
-
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+                // You can add code here to handle form submission, like sending data to a server or showing a success message.
+                alert('Form submitted successfully!');
+            });
+        </script>
     <script src="/script.js"></script>
 </body>
 </html>

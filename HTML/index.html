@@ -15,8 +15,8 @@
             </ul> -->
             <ul class="menu">
                 <li class="search">
-                  <input type="text" id="searchInput" placeholder="Search...">
-                  <button onclick="searchPosts()">Search</button>
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+                   <button onclick="searchPosts()" class="search-button">Search</button>
                 </li>
                 <li><a href="/HTML/index.html">Home</a></li>
                 <li class="dropdown">
@@ -31,7 +31,7 @@
                 <li><a href="/HTML/about.html"  id="about-link">About</a></li>
                 <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
                 <li><a href="/HTML/testing.html" id="contract-link">testing</a></li>
-                <li><a href="/HTML/mainpage/page1.html" id="contract-link">page1</a></li>
+                <li><a href="/HTML/mp/page1.html" id="contract-link">page1</a></li>
                 <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
             </ul>
         </header>
@@ -101,35 +101,57 @@
 
           <div class="rows">
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
+              <a href=""class="post-title" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-26T16:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
+              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
+              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
         </div>
         <!-- Second Row -->
         <div class="rows">
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 4"><p >Hopely <br> 
+              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 4"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
+              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
             <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
+              <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
               <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
         </div>
       
+        
+        
+        <script>
+          function searchPosts() {
+            var input, filter;
+            input = document.getElementById('searchInput');
+            filter = input.value.trim();
           
+            // Get all post titles
+            var posts = document.getElementsByClassName('post-title');
+            var titles = [];
+            for (var i = 0; i < posts.length; i++) {
+              titles.push(posts[i].textContent || posts[i].innerText);
+            }
+          
+            // Redirect to the search results page with the search query and titles as parameters
+            window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles));
+          }
+          </script>
+
+
+
+
         
         <div id="pagination-container">
           <ul class="pagination" id="pagination">

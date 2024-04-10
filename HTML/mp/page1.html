@@ -1,155 +1,111 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/CSS/index.css">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Page</title>
+<style>
+  .search-container {
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+  }
+  .search-input {
+    padding: 10px;
+    width: 60%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  .search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .post-title {
+    display: block; /* Show posts on index page */
+    justify-content: space-between;
 
-        <!-- header -->
-        <header class="header">
-            <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
-            <input class="menu-btn" type="checkbox" id="menu-btn" />
-            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-            <!-- <ul class="search">
-              <input type="text" id="searchInput" placeholder="Search...">
-              <button onclick="searchPosts()">Search</button>
-            </ul> -->
-            <ul class="menu">
-                <li class="search">
-                  <input type="text" id="searchInput" placeholder="Search...">
-                  <button onclick="searchPosts()">Search</button>
-                </li>
-                <li><a href="/HTML/index.html">Home</a></li>
-                <li class="dropdown">
-                    <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
-                    <div id="aboutDropdown" class="dropdown-content">
-                    <div class="dropdown-content">
-                        <a href="/HTML/math.html">Math</a>
-                        <a href="/HTML/physics.html">Physics</a>
-                        <a href="/HTML/code.html">Code</a>
-                    </div>
-                </li>
-                <li><a href="/HTML/about.html"  id="about-link">About</a></li>
-                <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
-                <li><a href="/HTML/testing.html" id="contract-link">testing</a></li>
-                <li><a href="/HTML/mainpage/page1.html" id="contract-link">page1</a></li>
-                <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
-            </ul>
-        </header>
-      
-        <!-- Slidershow -->
-        <div class="container">
-            
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <img src="/assit/P1.jpg" >
-          </div>
-        
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <img src="/assit/undernav.jpg">
-          </div>
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="/assit/P1.jpg" >
-          </div>
-        
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="/assit/undernav.jpg">
-          </div>
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="/assit/P1.jpg" >
-          </div>
-        
-          <div class="mySlides" id="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="/assit/undernav.jpg">
-          </div>
+  }
+</style>
+</head>
+<body>
 
-          <a class="prev" onclick="plusSlides(-1)">❮</a>
-          <a class="next" onclick="plusSlides(1)">❯</a>
+<div class="search-container">
+  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+  <button onclick="searchPosts()" class="search-button">Search</button>
+</div>
 
-         <!-- slidershow under -->
-        </div>
-        <div class="caption-container">
-          <p id="caption"></p>
-        </div>
-          <div class="row">
-            <div class="column">
-              <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-            </div>
-            <div class="column">
-                <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-            </div>
-            <div class="column">
-                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Woods">
-            </div>
-            <div class="column">
-                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cinque Terre">
-            </div>
-            <div class="column">
-                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Woods">
-            </div>
-            <div class="column">
-                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
-            </div>
-        </div> 
+<!-- Sample posts with class post-title -->
+<div class="rows">
+  <div class="columns">
+    <a href=""class="post-title" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
+      <span class="time-ago" data-timestamp="2024-03-26T16:00:00Z"></span> </span></p></a>
+  </div>
+  <div class="columns">
+    <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
+      <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
+  </div>
+  <div class="columns">
+    <a href="" class="post-title"> <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
+      <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
+  </div>
+</div>
 
+<script>
+function searchPosts() {
+  var input, filter;
+  input = document.getElementById('searchInput');
+  filter = input.value.trim();
 
-        <div class = "Home-nav">
+  // Get all post titles
+  var posts = document.getElementsByClassName('post-title');
+  var titles = [];
+  for (var i = 0; i < posts.length; i++) {
+    titles.push(posts[i].textContent || posts[i].innerText);
+  }
 
-          <div class="rows">
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-26T16:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-        </div>
-        <!-- Second Row -->
-        <div class="rows">
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 4"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
-              <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-        </div>
-      
-          
-        
-        <div id="pagination-container">
-          <ul class="pagination" id="pagination">
-            <!-- Pagination links will be inserted here -->
-          </ul>
-        </div>
-        
-      </div> 
-      </div> 
-      <footer>
-        <p>&copy; 2024 WorkHard. All rights reserved.</p>
-      </footer>
+  // Redirect to the search results page with the search query and titles as parameters
+  window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles));
+}
+</script>
 
-        <script src="/script.js"></script>
+<!-- <script>
+  function searchPosts() {
+  var input, filter;
+  input = document.getElementById('searchInput');
+  filter = input.value.trim();
+
+  // Get all post titles and image sources
+  var posts = document.querySelectorAll('.columns');
+  var titles = [];
+  posts.forEach(function(post) {
+    var pElement = post.querySelector('.post-title p');
+    var title = pElement.textContent.trim();
+    console.log('Title:', title); // Debugging statement
+    if (title.includes(filter)) {
+      var imgElement = post.querySelector('img');
+      var spanElement = post.querySelector('.time-ago');
+      titles.push({ imgSrc: imgElement.getAttribute('src'), spanText: spanElement.textContent });
+    }
+  });
+
+  // Log the titles array to check its content
+  console.log('Titles:', titles);
+
+  // Redirect to the search results page with the search query and titles as parameters
+  window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles));
+}
+
+  </script> -->
 
 
 
-        
-
-       
 
 </body>
 </html>
