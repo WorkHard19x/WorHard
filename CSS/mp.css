@@ -348,8 +348,7 @@ h1 {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Adjust as needed */
-  
-   
+    
   }
   .Home-nav .rows{
   

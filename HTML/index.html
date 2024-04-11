@@ -97,7 +97,7 @@
         </div> 
 
 
-        <div class = "Home-nav">
+        <!-- <div class = "Home-nav">
 
           <div class="rows">
             <div class="columns">
@@ -113,7 +113,7 @@
                 <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
         </div>
-        <!-- Second Row -->
+        
         <div class="rows">
             <div class="columns">
               <a href="/HTML/mp/5.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 4"><p >eachdy <br> 
@@ -127,65 +127,209 @@
               <a href="/HTML/mp/7.html" class="post-title"> <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
               <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
             </div>
-        </div>
+        </div> -->
       
+        <style>
+          .test1 {
+            width: 70%; 
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 20px ;
+            border: 1px solid blue;
+            background-color: black;
+            position: relative;
+            justify-content: center; 
+            margin-left: auto;
+            margin-right: auto;
+
+           
+          }
+          .test2{
+            width: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            margin-right: 10px;
+            padding: 30px 40px; 
+            flex-wrap: wrap;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: white;
+            border: 1px solid #fa0909; /* Add border to each search result */
+            justify-content: space-between;
+            display: block; /* Initially hide all test2 elements */
+
+
+
+          }
+
+          .test1 img {
+            max-width: 100%; /* Ensure image fits within its container */
+          }
+          .test2 span {
+            color:rgb(12, 12, 12); /* Ensure image fits within its container */
+          }
+
+          .test2 .post-link{
+            text-decoration: none;
+          }
         
+        </style>
         
+        <div class="test1">
+          <div class="test2" data-title="">
+            <a href="/HTML/mp/5.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/mp/5.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/mp/5.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination-container">
+            <ul class="pagination" id="pagination">
+              <!-- Pagination links will be inserted here -->
+            </ul>
+          </div>
+        
+        </div>
+        
+
         <!-- <script>
+          function searchPosts() {
+            // Get input value
+            var searchInput = document.getElementById('searchInput').value.trim().toLowerCase();
+            
+            // Get all posts
+            var posts = document.querySelectorAll('.test2');
+        
+            // Loop through each post
+            posts.forEach(function(post) {
+              // Get text content of link, image alt, and paragraph inside the post
+              var linkText = post.querySelector('a').innerText.toLowerCase();
+              var imgAlt = post.querySelector('img').alt.toLowerCase();
+              var paragraphText = post.querySelector('p').innerText.toLowerCase();
+        
+              // Check if search input is empty or matches any content
+              if (searchInput === '' || linkText.includes(searchInput) || imgAlt.includes(searchInput) || paragraphText.includes(searchInput)) {
+                // Show the post if it matches
+                post.style.display = 'block';
+              } else {
+                // Hide the post if it doesn't match
+                post.style.display = 'none';
+              }
+            });
+          }
+        </script> -->
+
+
+
+
+
+
+
+
+        <script>
           function searchPosts() {
             var input, filter;
             input = document.getElementById('searchInput');
             filter = input.value.trim();
-          
-            // Get all post titles
-            var posts = document.getElementsByClassName('post-title');
+            
+            // Get all post titles and image sources
+            var posts = document.querySelectorAll('.test2');
             var titles = [];
-            for (var i = 0; i < posts.length; i++) {
-              titles.push(posts[i].textContent || posts[i].innerText);
-            }
-          
-            // Redirect to the search results page with the search query and titles as parameters
-            window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles));
+            var imageSrcs = [];
+            var aHerfs = [];
+            
+            posts.forEach(function(post) {
+              var paragraphText = post.querySelector('p').innerText.toLowerCase();
+              var title = paragraphText.trim();
+
+              var linkText = post.querySelector('a').innerText.toLowerCase();
+              var aherf = post.querySelector('a').getAttribute('href');
+
+              var imgAlt = post.querySelector('img').alt.toLowerCase();
+              var imgSrc = post.querySelector('img').getAttribute('src');
+              
+              titles.push(title);
+              aHerfs.push(aherf);
+              imageSrcs.push(imgSrc);
+              
+            });
+            
+            // Redirect to the search results page with the search query, titles, and image sources as parameters
+            window.location.href = '/HTML/result.html?q=' + encodeURIComponent(filter)
+              + '&titles=' + encodeURIComponent(JSON.stringify(titles)) 
+              + '&aHerfs=' + encodeURIComponent(JSON.stringify(aHerfs))
+              + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs));
           }
-          </script> -->
+          </script>
 
 
 
-
-          <script>
-            function searchPosts() {
-              var input, filter;
-              input = document.getElementById('searchInput');
-              filter = input.value.trim();
-            
-              // Get all post titles and image sources
-              var posts = document.querySelectorAll('.columns');
-              var titles = [];
-              var AHerfs = [];
-              var imageSrcs = [];
-              posts.forEach(function(post) {
-                var pElement = post.querySelector('.post-title p');
-                var title = pElement.textContent.trim();
-                var imgElement = post.querySelector('img');
-                var imgSrc = imgElement.getAttribute('src');
-                titles.push(title);
-                imageSrcs.push(imgSrc);
-              });
-            
-              // Redirect to the search results page with the search query, titles, and image sources as parameters
-              window.location.href = '/HTML/search-results.html?q=' + encodeURIComponent(filter) + '&titles=' + encodeURIComponent(JSON.stringify(titles)) + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs))+ '&AHerfs=' + encodeURIComponent(JSON.stringify(AHerfs));
-            }
-            </script>
-            
-
-
-
-
-
-
-
-
-
+       
 
         
         <div id="pagination-container">

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Results</title>
+<style>
+  .search-results-container {
+    width: 60%; 
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px ;
+    border: 1px solid blue;
+    position: relative;
+    justify-content: center; 
+   
+  }
+  .search-result {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding: 30px 40px; 
+    flex-wrap: wrap;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid #fa0909; /* Add border to each search result */
+    justify-content: space-between;
+  }
+  .search-result img {
+    max-width: 100%; /* Ensure image fits within its container */
+  }
+  .search-result a{
+    text-decoration: none; 
+    color: black;
+
+  }
+
+</style>
+</head>
+<body>
+
+<div class="search-results-container">
+  
+  <div id="searchResults">
+    <!-- Search results will appear here -->
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var queryString = window.location.search;
+      var urlParams = new URLSearchParams(queryString);
+      var searchQuery = urlParams.get('q');
+      var titles = JSON.parse(urlParams.get('titles'));
+      var imageSrcs = JSON.parse(urlParams.get('imageSrcs'));
+      var aHerfs = JSON.parse(urlParams.get('aHerfs'));
+
+      if (searchQuery) {
+        searchPosts(searchQuery, titles, imageSrcs,aHerfs);
+      } else {
+        // Display a message if no search query is provided
+        displayNoQueryMessage();
+      }
+    });
+    
+    function searchPosts(query, titles, imageSrcs,aHerfs) {
+      var filter = query.toUpperCase();
+      var matchingTitles = [];
+      var matchingImageSrcs = [];
+      var matchingaHerfs = [];
+
+      // Loop through all post titles and find matching ones
+      for (var i = 0; i < titles.length; i++) {
+        if (titles[i].toUpperCase().includes(filter)) {
+          matchingTitles.push(titles[i]);
+          matchingImageSrcs.push(imageSrcs[i]);
+          matchingaHerfs.push(aHerfs[i]);
+        }
+      }
+    
+      // Display the search results
+      displaySearchResults(matchingTitles, matchingImageSrcs,matchingaHerfs);
+    }
+    
+    function displaySearchResults(titles, imageSrcs, aHerfs) {
+        var searchResultsDiv = document.getElementById('searchResults');
+        searchResultsDiv.innerHTML = '';
+
+        if (titles.length === 0) {
+            searchResultsDiv.innerHTML = '<p>No results found.</p>';
+        } else {
+            for (var i = 0; i < titles.length; i++) {
+            var div = document.createElement('div');
+            div.classList.add('search-result');
+
+            // Create an <a> tag to wrap the image and title
+            var a = document.createElement('a');
+            a.href = aHerfs[i]; // Set the href attribute to the link
+            div.appendChild(a); // Append the <a> tag to the search result div
+
+            // Create and append the image
+            var img = document.createElement('img');
+            img.src = imageSrcs[i];
+            a.appendChild(img); // Append the image to the <a> tag
+
+            // Create and append the title
+            var p = document.createElement('p');
+            p.textContent = titles[i];
+            a.appendChild(p); // Append the title to the <a> tag
+
+            searchResultsDiv.appendChild(div);
+            }
+        }
+    }
+        
+    function displayNoQueryMessage() {
+      var searchResultsDiv = document.getElementById('searchResults');
+      searchResultsDiv.innerHTML = '<p>No search query provided.</p>';
+    }
+    </script>
+
+
+
+  
+  
+
+
+</body>
+</html>
