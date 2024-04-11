@@ -398,10 +398,11 @@ width: 100%;
   
 }
 .pagination li a:hover {
-  color: green; /* Color on hover */
+  color: rgb(245, 8, 8); /* Color on hover */
 }
 .pagination li.active a {
-  color: rgb(17, 0, 255); /* Color when active */
+  background-color: #007bff !important;
+  color: #fff !important;
 }
 
 
@@ -495,9 +496,12 @@ width: 100%;
     display: flex;
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Adjust as needed */
-  
-   
   }
+ 
+
+
+
+
   .Home-nav .rows{
   
     display: flex;

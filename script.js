@@ -15,66 +15,66 @@ startSlideShow();
 
 
 //pagination
-function generatePagination(currentPage, totalPages, pageURLs) {
-  const paginationContainer = document.getElementById('pagination');
-  paginationContainer.innerHTML = '';
+// function generatePagination(currentPage, totalPages, pageURLs) {
+//   const paginationContainer = document.getElementById('pagination');
+//   paginationContainer.innerHTML = '';
 
-  // Previous Page Link
-  const prevLi = document.createElement('li');
-  const prevA = document.createElement('a');
-  prevA.href = currentPage > 1 ? pageURLs[currentPage - 2] : '#';
-  prevA.textContent = 'Previous';
-  prevLi.appendChild(prevA);
-  paginationContainer.appendChild(prevLi);
+//   // Previous Page Link
+//   const prevLi = document.createElement('li');
+//   const prevA = document.createElement('a');
+//   prevA.href = currentPage > 1 ? pageURLs[currentPage - 2] : '#';
+//   prevA.textContent = 'Previous';
+//   prevLi.appendChild(prevA);
+//   paginationContainer.appendChild(prevLi);
 
-  const startPage = Math.max(1, currentPage - 2);
-  const endPage = Math.min(totalPages, startPage + 4);
+//   const startPage = Math.max(1, currentPage - 2);
+//   const endPage = Math.min(totalPages, startPage + 4);
 
-  for (let i = startPage; i <= endPage; i++) {
-    const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = pageURLs[i - 1]; // Adjust index since pages start from 1
-    a.textContent = i;
-    if (i === currentPage) {
-      li.classList.add('active');
+//   for (let i = startPage; i <= endPage; i++) {
+//     const li = document.createElement('li');
+//     const a = document.createElement('a');
+//     a.href = pageURLs[i - 1]; // Adjust index since pages start from 1
+//     a.textContent = i;
+//     if (i === currentPage) {
+//       li.classList.add('active');
      
-    }
-    // a.addEventListener('click', function(event) {
+//     }
+//     // a.addEventListener('click', function(event) {
       
-    //   event.preventDefault(); // Prevent the default behavior of the link
-    //   generatePagination(i, totalPages, pageURLs);
-    // });
+//     //   event.preventDefault(); // Prevent the default behavior of the link
+//     //   generatePagination(i, totalPages, pageURLs);
+//     // });
     
-    li.appendChild(a);
-    paginationContainer.appendChild(li);
-  }
+//     li.appendChild(a);
+//     paginationContainer.appendChild(li);
+//   }
 
-  // Next Page Link
-  const nextLi = document.createElement('li');
-  const nextA = document.createElement('a');
-  nextA.href = currentPage < totalPages ? pageURLs[currentPage] : '#';
-  nextA.textContent = 'Next';
-  nextLi.appendChild(nextA);
-  paginationContainer.appendChild(nextLi);
-}
+//   // Next Page Link
+//   const nextLi = document.createElement('li');
+//   const nextA = document.createElement('a');
+//   nextA.href = currentPage < totalPages ? pageURLs[currentPage] : '#';
+//   nextA.textContent = 'Next';
+//   nextLi.appendChild(nextA);
+//   paginationContainer.appendChild(nextLi);
+// }
 
-// Example usage:
-// Assuming current page is 3 and total pages is 10
-// and pageURLs is an array of URLs for each page
-const pageURLs = [
-  '/HTML/index.html',
-  '/HTML/mp/2.html',
-  '/HTML/mp/3.html',
-  '/HTML/mp/4.html',
-  '/HTML/mp/5.html',
-  '/HTML/mp/6.html',
-  '/HTML/mp/7.html',
-  '/HTML/mp/8.html',
-  '/HTML/mp/9.html'
+// // Example usage:
+// // Assuming current page is 3 and total pages is 10
+// // and pageURLs is an array of URLs for each page
+// const pageURLs = [
+//   '/HTML/index.html',
+//   '/HTML/mp/2.html',
+//   '/HTML/mp/3.html',
+//   '/HTML/mp/4.html',
+//   '/HTML/mp/5.html',
+//   '/HTML/mp/6.html',
+//   '/HTML/mp/7.html',
+//   '/HTML/mp/8.html',
+//   '/HTML/mp/9.html'
 
-  // Add URLs for other pages here
-];
-generatePagination(1, 10, pageURLs);
+//   // Add URLs for other pages here
+// ];
+// generatePagination(1, 10, pageURLs);
 
 
 document.addEventListener("DOMContentLoaded", function() {

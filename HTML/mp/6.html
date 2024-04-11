@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="/CSS/mp.css">
+        <link rel="stylesheet" href="/CSS/index.css">
     </head>
     <body>
 
@@ -9,72 +9,341 @@
             <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
-            <!-- <ul class="search">
-              <input type="text" id="searchInput" placeholder="Search...">
-              <button onclick="searchPosts()">Search</button>
-            </ul> -->
             <ul class="menu">
-              <li class="search">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="searchPosts()">Search</button>
-              </li>
-              <li><a href="/HTML/index.html">Home</a></li>
-              <li class="dropdown">
-                  <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
-                  <div id="aboutDropdown" class="dropdown-content">
-                  <div class="dropdown-content">
-                      <a href="/HTML/math.html">Math</a>
-                      <a href="/HTML/physics.html">Physics</a>
-                      <a href="/HTML/code.html">Code</a>
-                  </div>
-              </li>
-              <li><a href="/HTML/about.html"  id="about-link">About</a></li>
-              <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
-              <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
-          </ul>
+                <li class="search">
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+                   <button onclick="searchPosts()" class="search-button">Search</button>
+                </li>
+                <li><a href="/HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                    <div class="dropdown-content">
+                        <a href="/HTML/math.html">Math</a>
+                        <a href="/HTML/physics.html">Physics</a>
+                        <a href="/HTML/code.html">Code</a>
+                    </div>
+                </li>
+                <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+                <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+                <li><a href="/HTML/testing.html" id="contract-link">testing</a></li>
+                <li><a href="/HTML/mp/page1.html" id="contract-link">page1</a></li>
+                <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+            </ul>
         </header>
       
-
-
-        <div class = "Home-nav">
-          <h1>Continues Learning?</h1>
-          <div class="rows">
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 1"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-26T16:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 2"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 3"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-        </div>
-        <!-- Second Row -->
-        <div class="rows">
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 4"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 5"><p >Hopely <br> 
-                <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-            <div class="columns">
-              <a href="" > <img src="/assit/P1.jpg" alt="Image 6"><p >Hopely <br> 
-              <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span> </span></p></a>
-            </div>
-        </div>
-      
-          
+        <!-- Slidershow -->
+        <div class="container">
+            
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="/assit/P1.jpg" >
+          </div>
         
-        <div id="pagination-container">
-          <ul class="pagination" id="pagination">
-            <!-- Pagination links will be inserted here -->
-          </ul>
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="/assit/undernav.jpg">
+          </div>
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">3 / 6</div>
+            <img src="/assit/P1.jpg" >
+          </div>
+        
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">4 / 6</div>
+            <img src="/assit/undernav.jpg">
+          </div>
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">5 / 6</div>
+            <img src="/assit/P1.jpg" >
+          </div>
+        
+          <div class="mySlides" id="mySlides">
+            <div class="numbertext">6 / 6</div>
+            <img src="/assit/undernav.jpg">
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+         <!-- slidershow under -->
         </div>
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+          <div class="row">
+            <div class="column">
+              <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+            </div>
+            <div class="column">
+                <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Woods">
+            </div>
+            <div class="column">
+                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cinque Terre">
+            </div>
+            <div class="column">
+                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Woods">
+            </div>
+            <div class="column">
+                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
+            </div>
+        </div> 
+      
+        <style>
+          .test1 {
+            width: 70%; 
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 20px ;
+            border: 0.1px solid rgb(128, 126, 126);
+            background-color: black;
+            position: relative;
+            justify-content: center; 
+            margin-left: auto;
+            margin-right: auto;
+
+           
+          }
+          .test2{
+            width: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            margin-right: 10px;
+            padding: 30px 40px; 
+            flex-wrap: wrap;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color: rgb(128, 126, 126);
+            border: 1px solid #fa0909; /* Add border to each search result */
+            justify-content: space-between;
+            display: block; /* Initially hide all test2 elements */
+          }
+
+          .test1 img {
+            max-width: 100%; /* Ensure image fits within its container */
+          }
+          .test2 span {
+            color:rgb(12, 12, 12); /* Ensure image fits within its container */
+          }
+
+          .test2 .post-link{
+            text-decoration: none;
+          }
+          
+        </style>
+        
+        <div class="test1">
+          <div class="test2" data-title="">
+            <a href="/HTML/index.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/mp/5.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/mp/5.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 1</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/mp/7.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Post Content 2</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/mp/6.html" class="post-link">
+            <span><img src="/assit/P1.jpg" alt=""></span>
+            <span><p>Hopely</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <!-- Pagination -->
+          <div id="pagination-container">
+            <ul class="pagination" id="pagination">
+            </ul>
+          </div>
+        
+        </div>
+        
+
+        <script>
+          function searchPosts() {
+            var input, filter;
+            input = document.getElementById('searchInput');
+            filter = input.value.trim();
+            
+            // Get all post titles and image sources
+            var posts = document.querySelectorAll('.test2');
+            var titles = [];
+            var imageSrcs = [];
+            var aHerfs = [];p
+            
+            posts.forEach(function(post) {
+              var paragraphText = post.querySelector('p').innerText.toLowerCase();
+              var title = paragraphText.trim();
+
+              var linkText = post.querySelector('a').innerText.toLowerCase();
+              var aherf = post.querySelector('a').getAttribute('href');
+
+              var imgAlt = post.querySelector('img').alt.toLowerCase();
+              var imgSrc = post.querySelector('img').getAttribute('src');
+              
+              titles.push(title);
+              aHerfs.push(aherf);
+              imageSrcs.push(imgSrc);
+              
+            });
+            
+            // Redirect to the search results page with the search query, titles, and image sources as parameters
+            window.location.href = '/HTML/result.html?q=' + encodeURIComponent(filter)
+              + '&titles=' + encodeURIComponent(JSON.stringify(titles)) 
+              + '&aHerfs=' + encodeURIComponent(JSON.stringify(aHerfs))
+              + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs));
+          }
+          </script>
+        
+        <!-- <div id="pagination-container">
+          <ul class="pagination" id="pagination">
+          </ul>
+          </div> -->
+          <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const paginationContainer = document.getElementById("pagination");
+  const pageLinks = [
+    "/HTML/index.html",
+    "/HTML/mp/2.html",
+    "/HTML/mp/3.html",
+    "/HTML/mp/4.html",
+    "/HTML/mp/5.html",
+    "/HTML/mp/6.html",
+    // Add more page links as needed
+  ];
+  const itemsPerPage = 1; // Change this according to your requirement
+  const totalPages = Math.ceil(pageLinks.length / itemsPerPage);
+  const maxVisiblePages = 5; // Number of pages to show in the pagination
+
+  function renderPagination(currentPage) {
+    paginationContainer.innerHTML = ""; // Clear previous pagination links
+    const startIndex = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    const endIndex = Math.min(totalPages, startIndex + maxVisiblePages - 1);
+
+    // Render first page button if currentPage is not the first page
+
+      renderPaginationButton('First', 1);
+    
+
+    for (let i = startIndex; i <= endIndex; i++) {
+      renderPaginationButton(i, i);
+    }
+
+    // Render last page button if currentPage is not the last page
+    if (currentPage < totalPages) {
+      renderPaginationButton('Last', totalPages);
+    }
+  }
+
+  function renderPaginationButton(label, page) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.href = pageLinks[page - 1];
+  a.textContent = label;
+  
+  // Check if the current page matches the active page stored in sessionStorage
+  const activePage = sessionStorage.getItem("activePage");
+  if (activePage && parseInt(activePage) === page) {
+    a.classList.add("active");
+    a.style.color = '#007bff'; // Apply text color directly to the active link
+  }
+  
+  li.appendChild(a);
+  paginationContainer.appendChild(li);
+}
+
+
+  function handlePageClick(event) {
+  event.preventDefault();
+  if (event.target.tagName === "A") {
+    const page = parseInt(event.target.textContent);
+    const href = event.target.getAttribute("href");
+    window.location.href = href; // Open link in the same window
+    sessionStorage.setItem("activePage", page); // Store the active page in sessionStorage
+
+    // Remove "active" class from all links
+    const links = paginationContainer.querySelectorAll("a");
+    links.forEach(link => {
+      link.classList.remove("active");
+    });
+
+    // Add "active" class to the clicked link
+    event.target.classList.add("active");
+    event.target.style.backgroundColor = '#007bff'; // Apply background color directly to the clicked link
+    event.target.style.color = '#fff'; // Apply text color directly to the clicked link
+  }
+}
+
+
+  paginationContainer.addEventListener("click", handlePageClick);
+
+  // Retrieve active page from sessionStorage and render pagination with it
+  const activePage = sessionStorage.getItem("activePage");
+  const initialPage = activePage ? parseInt(activePage) : 1;
+  renderPagination(initialPage);
+});
+
+  </script>
+
+
+
         
       </div> 
       </div> 

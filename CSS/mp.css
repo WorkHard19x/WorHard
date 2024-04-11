@@ -279,26 +279,64 @@ h1 {
 
 }
 
-.pagination {
+/* .pagination {
   display: flex;
   list-style: none;
 }
 .pagination li {
   margin-right: 5px;
-  border: 1px solid rgb(248, 245, 245); /* Border for each pagination number */
-  padding: 10px; /* Padding to create some space around the number */
+  border: 1px solid rgb(248, 245, 245); 
+  padding: 10px; 
 }
 .pagination li a {
-  color: rgb(248, 248, 250); /* Default color */
+  color: rgb(248, 248, 250); 
   text-decoration: none;
   
 }
 .pagination li a:hover {
-  color: green; /* Color on hover */
+  color: green; 
 }
 .pagination li.active a {
-  color: rgb(17, 0, 255); /* Color when active */
+  color: rgb(17, 0, 255); 
+} */
+
+.pagination {
+  list-style-type: none;
+  display: inline-block;
+  margin: 20px 0;
+  padding: 0;
 }
+.pagination li {
+  display: inline;
+  margin-right: 5px;
+}
+.pagination li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.pagination li a.active {
+  background-color: #007bff;
+  color: #fff;
+} 
+
+.pagination li.disabled a {
+  pointer-events: none;
+  color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 48em = 768px @ 16pt font */
