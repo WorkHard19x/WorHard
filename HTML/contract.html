@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/CSS/register.css">
+<link rel="stylesheet" href="/CSS/contract.css">
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <title>Login</title>
@@ -16,7 +16,7 @@
     flex-wrap: wrap;
     padding: 10% 1px ;
     height: 100%;
-    top:66px;
+    top:50px;
     border: 1px solid transparent;
     position: relative;
     justify-content: center; 
@@ -192,7 +192,18 @@ section button:hover{
 <body>
 
   <header class="header">
-    <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
+    <!-- <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a> -->
+    <a href="/HTML/index.html" class="title-color" >
+        <span class="W">W</span>
+        <span class="O">O</span>
+        <span class="R">R</span>
+        <span class="K">K</span>
+        <span class="H">H</span>
+        <span class="A">A</span>
+        <span class="Rr">R</span>
+        <span class="D">D</span>
+        
+    </a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
     <ul class="menu">
@@ -200,6 +211,7 @@ section button:hover{
           <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
            <button onclick="searchPosts()" class="search-button">Search</button>
         </li>
+
         <li><a href="/HTML/index.html">Home</a></li>
         <li class="dropdown">
             <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
@@ -242,16 +254,15 @@ section button:hover{
                 <input type="text" id="name" name="category" required><br>
                 <label for="text">Category</label>
             </div>
-            <div class="inputbox">
-                <ion-icon name="call-outline"></ion-icon>
-                <input type="number" id="Phone" name="Phone" ><br>
-                <label for="number">Phone</label>
-            </div>
             <a style="font-size: 1rem; color: rgb(202, 203, 204);">Math,Physics,Code,etc.</a><br>
             <div class="inputbox">
+                <ion-icon name="call-outline"></ion-icon>
+                <input type="number" id="phone" name="phone" required><br>
+                <label for="phone">Phone</label>
+            </div>
+            <div class="inputbox">
                 <label for="image"></label>
-                <input type="file" id="image" name="image"><br> 
-           
+                <input type="file" id="image" name="image" accept=".pdf,.docx"><br> 
             </div>
             <div class="input-message">
                 <label for="text" style="color:white">Message:</label>

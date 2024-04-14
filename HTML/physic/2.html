@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/CSS/mp.css">
+        <title>Home</title>
+      </head>
+    <body>
+
+        <!-- header -->
+        <header class="header">
+            <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li class="search">
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+                   <button onclick="searchPosts()" class="search-button">Search</button>
+                </li>
+                <li><a href="/HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                    <div class="dropdown-content">
+                        <a href="/HTML/math.html">Math</a>
+                        <a href="/HTML/physics.html">Physics</a>
+                        <a href="/HTML/code.html">Code</a>
+                    </div>
+                </li>
+                <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+                <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+                <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+            </ul>
+        </header>
+        
+            
+        </body>
+        </html>

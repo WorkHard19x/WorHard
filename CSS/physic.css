@@ -34,7 +34,10 @@ body {
     border-right: 1px solid #f4f4f4;
     text-decoration: none;
   }
-  
+  .header .menu li a {
+    padding-left: 28px;
+    
+  }
   .header li a:hover,
   .header .menu-btn:hover {
     background-color: #f4f4f4;

@@ -29,7 +29,10 @@ h1 {
   overflow: hidden;
   background-color: #fff;
 }
-
+.header .menu li a {
+  padding-left: 28px;
+  
+}
 .header li a {
   display: block;
   padding: 25px 20px;
@@ -177,7 +180,7 @@ h1 {
 .dropdown-content {
   display: none;
   position: fixed;
-  background-color: #fffafa;
+  background-color: #777777;
   /* min-width: 160px;
   box-shadow: 0 8px 16px 0 rgba(254, 6, 6, 0.2);
   z-index: 1; */

@@ -53,13 +53,132 @@ a {
 
 }
 .header img{
-    width: 60px; /* Adjust the width of the logo */
+    width: 80px; /* Adjust the width of the logo */
     padding: 9px 0px;
     height: 50px; /* Maintain aspect ratio */
     border-radius: 25px;
     align-items: center;
 
 }
+
+.header .title-color {
+  display: block;
+  position: absolute;
+  left: 5px;
+  font-size: 2em;
+  text-decoration: none;  
+  padding-top: 15px;
+}
+
+.header .title-color span {
+  font-size: 25px;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-style: italic; /* Apply italic styling */
+  font-size: 32px;
+}
+
+.header .title-color .W{
+    /* background: linear-gradient(to right, red 50%, blue 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    /* -webkit-text-stroke: 1px rgb(60, 245, 100);  */
+    color: rgb(95, 165, 245);
+    text-shadow: 2px 2px  rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    position: relative; 
+  }
+.header .title-color .O{
+    /* background: linear-gradient( red 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+    color: rgb(95, 165, 245);
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+
+    right: 10px;
+    display: inline-block;
+    position: relative; 
+}
+
+.header .title-color .R{
+  /* background: linear-gradient(to right, yellow 20%, red 30%, blue 70%, pink 10% );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: rgb(95, 165, 245);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 20px;
+  display: inline-block;
+  position: relative;
+}
+.header .title-color .K{
+  /* background: linear-gradient(to right, red 50%, blue 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: rgb(95, 165, 245);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 30px;
+  display: inline-block;
+  position: relative;
+}
+.header .title-color .H{
+  /* background: linear-gradient(to right, red 50%, blue 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: #e97e27;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 34px;
+  display: inline-block;
+  position: relative;
+}
+.header .title-color .A{
+  /* background: linear-gradient(to right, red 50%, blue 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: #e97e27;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 42px;
+  display: inline-block;
+  position: relative;
+}
+.header .title-color .Rr{
+  /* background: linear-gradient(to right, red 50%, blue 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: #e97e27;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 50px;
+  display: inline-block;
+  position: relative;
+}
+.header .title-color .D{
+  /* background: linear-gradient(to right, red 50%, blue 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; */
+  color: #e97e27;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+  right: 57px;
+  display: inline-block;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* search */
 /* Style for search bar */
@@ -300,9 +419,6 @@ width: 100%;
   float: left;
   vertical-align: middle;
   opacity: 0.7;
-  
-
-  
 }
 
 .caption-container {

@@ -1,74 +1,188 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="stylesheet" href="/CSS/aboutus.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/CSS/about.css">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<title>Login</title>
+<style>
+  .search-results-container {
+    width: 99%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10% 1px ;
+    height: 100%;
+    border: 1px solid transparent;
+    position: relative;
+    justify-content: center; 
+    background-color: transparent;
+  }
+  section{
+    position: relative;
+    max-width: 60%;
+    background-color: transparent;
+    border: 2px solid rgba(225, 225, 225, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(55px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+    color: rgb(235, 233, 233);
+    text-align: center;
 
+}
+.about-us-word{
+    font-size: 20px;
+    padding: 1px 30px;
+    color: rgb(231, 231, 231);
+}
+
+.about-us-word a{
+  color:rgb(247, 149, 38);
+}
+
+  @media screen and (max-width: 1000px) {
+
+    .search-results-container {
+    width: 99%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20% 1px ;
+    height: 100%;
+    top:66px;
+    border: 1px solid transparent;
+    position: relative;
+    justify-content: center; 
+    background-color: transparent;
+  }
+ 
+
+  }
+  @media screen and (max-width:300px) {
+        .search-results-container {
+          width: 99%; 
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          flex-wrap: wrap;
+          padding: 20% 1px ;
+          height: 100%;
+          top:66px;
+          border: 1px solid transparent;
+          position: relative;
+          justify-content: center; 
+          background-color: transparent;
+        }    
+       
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    .input-message{
+    position: relative;
+    margin: 20px 0;
+    max-width: 310px;
+    }
+    .input-message textarea{
+        max-width: 310px;
+        min-height: 100px;
+    }
+    .input-message ion-icon{
+    right: 8px;
+    color: white;
+    font-size: 1.2rem;
+}
+</style>
 </head>
 <body>
-    <div class="about-bg">
-    <header>
-        <div class="logo-container">
-            <a href="/HTML/index.html"><img src="/logo/logo.png" alt="Logo"></a>
-        </div>
-        <h1>Welcome to WorkHard</h1>
-    </header>
 
-    <nav>
-        <ul>
-            
-            <li><a href="/HTML/index.html" id="home-link">Home</a></li>
-            <li class="dropdown">
-                <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
-                <div id="aboutDropdown" class="dropdown-content">
-                <div class="dropdown-content">
-                    <a href="/HTML/math.html">Math</a>
-                    <a href="/HTML/physics.html">Physics</a>
-                    <a href="/HTML/code.html">Code</a>
-                </div>
-            </li>
-            <li><a href="/HTML/about.html"  id="about-link">About</a></li>
-            <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
-        </ul>
-    </nav>
+  <header class="header">
 
-        <div class="about-us">
-            <h1 >About Us</h1>
-            <ul>
-                <p>At WorkHard, we understand the unique challenges students face in their academic journey, 
-                    which is why we've developed a range of tailored solutions to address their needs. 
-                    Whether it's struggling with complex math problems, deciphering intricate lab reports, 
-                    or embarking on the daunting task of website creation, our platform offers clear and 
-                    concise guidance every step of the way. From providing access to vast repositories of educational 
-                    resources to offering interactive tools for collaborative learning, 
-                    WorkHard is committed to empowering students with the support they need to succeed.</p>
-                <p>Our solutions go beyond mere assistance; we aim to cultivate a culture of confidence
-                    and competence among students. Through personalized study plans, real-time feedback,
-                    and community support, we foster an environment where students can thrive academically
-                    and develop the skills necessary for lifelong learning.
-                    At WorkHard, we're not just providing answers; 
-                    we're empowering the next generation of thinkers, creators, 
-                    and leaders to unlock their full potential and achieve academic excellence.</p>
-            </ul> 
-        </div>
-            <div class="contract">
-                <ul>
-                    <h2>Contract us</h2>
-                    <p>Link: <a href="/HTML/contract.html">Click Here</a> </p> 
-                </ul> 
+    <a href="/HTML/index.html" class="title-color" >
+        <span class="W">W</span>
+        <span class="O">O</span>
+        <span class="R">R</span>
+        <span class="K">K</span>
+        <span class="H">H</span>
+        <span class="A">A</span>
+        <span class="Rr">R</span>
+        <span class="D">D</span>
+        
+    </a>
+
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <ul class="menu">
+        <li class="search">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+           <button onclick="searchPosts()" class="search-button">Search</button>
+        </li>
+
+        <li><a href="/HTML/index.html">Home</a></li>
+        <li class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+            <div id="aboutDropdown" class="dropdown-content">
+            <div class="dropdown-content">
+                <a href="/HTML/math.html">Math</a>
+                <a href="/HTML/physics.html">Physics</a>
+                <a href="/HTML/code.html">Code</a>
             </div>
-             
+        </li>
+        <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+        <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+        <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+    </ul>
+</header>
 
-    <footer>
-        <p>&copy; 2024 WorkHard. All rights reserved.</p>
-    </footer>
 
-    <script src="/script.js"></script>
+
+
+
+
+
+
+<div class="search-results-container">
+  <section>
+          <form >
+            <h1>About Us</h1>
+            <div class="about-us-word">
+                <p>At WorkHard, we understand the unique challenges students face in their academic journey, which is why we've developed a range of tailored solutions to address their needs. Whether it's struggling with complex math problems, deciphering intricate lab reports, or embarking on the daunting task of website creation, our platform offers clear and concise guidance every step of the way. From providing access to vast repositories of educational resources to offering interactive tools for collaborative learning, WorkHard is committed to empowering students with the support they need to succeed.</p>
+                <p>Our solutions go beyond mere assistance; we aim to cultivate a culture of confidence and competence among students. Through personalized study plans, real-time feedback, and community support, we foster an environment where students can thrive academically and develop the skills necessary for lifelong learning. At WorkHard, we're not just providing answers; we're empowering the next generation of thinkers, creators, and leaders to unlock their full potential and achieve academic excellence.</p>
+                <p>Ready to revolutionize your academic journey? Contact us today to explore how WorkHard can tailor our solutions to meet your specific needs. Whether you're an individual student seeking personalized guidance or an educational institution looking to enhance your students' learning experience, our team is here to support you every step of the way.
+                  <a href="/HTML/contract.html">Click here</a>  to get in touch with us and embark on a transformative educational journey with WorkHard.</p>
+              </div>
+            
+          </form>
+        </section>
+</div>
+
+
+
+
+
+  
+<footer>
+    <p>&copy; 2024 WorkHard. All rights reserved.</p>
+</footer>
+
+
 </body>
 </html>
