@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     padding: 30px 20px ;
     top:66px;
-    border: 1px solid blue;
+    border: 1px solid rgb(0, 0, 0);
     position: relative;
     justify-content: center; 
     background-color: rgb(7, 7, 7);
@@ -27,7 +27,7 @@
   .search-result {
     width: calc(33.33% - 10px);
     margin-bottom: 20px;
-    margin-top: 120px;
+    margin-top: 20px;
     margin-right: 10px;
     border-radius: 5px;
     padding: 10px 15px; 
@@ -40,7 +40,7 @@
   }
   .search-result img {
     width: 100%; /* Ensure image fits within its container */
-    height: 250px;
+    height: 200px;
   }
   .search-result a{
     text-decoration: none; 
@@ -50,14 +50,14 @@
   .result-tittle h1{
     color: white;
     justify-content: center; 
-    position: fixed;
-    left: 45%;
+    display: flex;
+    position: relative;
   }
   @media screen and (max-width: 1000px) {
             .search-result {
             width: calc(33.33% - 10px);
             margin-bottom: 20px;
-            margin-top: 120px;
+            margin-top: 20px;
             margin-right: 10px;
             border-radius: 5px;
             padding: 1px 1px; 
@@ -81,7 +81,7 @@
           }
           .search-result img {
             width: 100%; /* Ensure image fits within its container */
-            height: 150px;
+            height: 170px;
           }
           .search-result a{
             font-size: 13px;
@@ -185,7 +185,11 @@
         searchResultsDiv.innerHTML = '';
 
         if (titles.length === 0) {
-          searchResultsDiv.innerHTML = '<p style="color: white; text-align: center;  font-weight: bold; font-size: 20px;  margin-top:150px">No results found.</p>';
+          searchResultsDiv.innerHTML = '<p style="color: white; text-align: center;  font-weight: bold; font-size: 25px;  ">No results found.</p>';
+          var h1Element = document.querySelector('.result-tittle h1');
+            if (h1Element) {
+                h1Element.style.display = 'none';
+            }
         } else {
             for (var i = 0; i < titles.length; i++) {
             var div = document.createElement('div');

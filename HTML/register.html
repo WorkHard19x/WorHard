@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="/CSS/register.css">
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<title>Login</title>
+<title>Register</title>
 <style>
   .search-results-container {
     width: 99%; 
@@ -121,7 +121,7 @@ section button:hover{
 }
 .register p a{
     text-decoration: underline;
-    color: rgb(7, 243, 66);
+    color: rgb(5, 248, 25);
     font-weight: 600;
 }
 .register p a:hover{
@@ -148,19 +148,19 @@ section button:hover{
   }
   @media screen and (max-width:350px) {
         .search-results-container {
-          width: 99%; 
-          margin-left: auto;
-          margin-right: auto;
-          display: flex;
-          flex-wrap: wrap;
-          padding: 20% 1px ;
-          height: 100%;
-          top:66px;
-          border: 1px solid transparent;
-          position: relative;
-          justify-content: center; 
-          background-color: transparent;
-        }    
+        width: 99%; 
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20% 1px ;
+        height: 100%;
+        top:66px;
+        border: 1px solid transparent;
+        position: relative;
+        justify-content: center; 
+        background-color: transparent;
+    }      
     }
     @keyframes gradient {
         0% {
@@ -173,20 +173,6 @@ section button:hover{
             background-position: 0% 50%;
         }
     }
-    .input-message{
-    position: relative;
-    margin: 20px 0;
-    max-width: 310px;
-    }
-    .input-message textarea{
-        max-width: 310px;
-        min-height: 100px;
-    }
-    .input-message ion-icon{
-    right: 8px;
-    color: white;
-    font-size: 1.2rem;
-}
 </style>
 </head>
 <body>
@@ -225,51 +211,33 @@ section button:hover{
 
 <div class="search-results-container">
   <section>
-          <form id="contact-form">
-            <h1>Contact</h1>
+          <form >
+            <h1>Register</h1>
             <div class="inputbox">
-              <ion-icon name="person-outline"></ion-icon>
-              <input type="text" id="name" name="name" required><br>
-              <label for="Name">Name</label>
-            </div>
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="name" required>
+                <label for="">Name</label>
+              </div>
             <div class="inputbox">
-                <ion-icon name="mail-outline"></ion-icon>
-                <input type="email" id="email" name="email" required><br>
-                <label for="email">Email</label>
-            </div>
-            <div class="inputbox">
-                <ion-icon name="book-outline"></ion-icon>
-                <input type="text" id="name" name="category" required><br>
-                <label for="text">Category</label>
+              <ion-icon name="mail-outline"></ion-icon>
+              <input type="email" required>
+              <label for="">Email</label>
             </div>
             <div class="inputbox">
-                <ion-icon name="call-outline"></ion-icon>
-                <input type="number" id="Phone" name="Phone" ><br>
-                <label for="number">Phone</label>
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <input type="password" required>
+              <label for="">Password</label>
             </div>
-            <a style="font-size: 1rem; color: rgb(202, 203, 204);">Math,Physics,Code,etc.</a><br>
-            <div class="inputbox">
-                <label for="image"></label>
-                <input type="file" id="image" name="image"><br> 
-           
+
+            <button>Register</button>
+            <div class="register">
+              <p>Already have a account <a href="/HTML/login.html">Login</a></p>
             </div>
-            <div class="input-message">
-                <label for="text" style="color:white">Message:</label>
-                <ion-icon name="document-text-outline"></ion-icon>
-                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
-            </div>
-            <button type="submit" value="Submit">Submit</button>
           </form>
         </section>
 </div>
 
-<script>
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-        // You can add code here to handle form submission, like sending data to a server or showing a success message.
-        alert('Form submitted successfully!');
-    });
-</script>
+
 
 
 

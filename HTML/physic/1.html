@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/CSS/result.css">
+
+<title>Search Results</title>
+<style>
+  .search-results-container {
+    width: 70%; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 20px ;
+    top:66px;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    justify-content: center; 
+    background-color: rgb(53, 52, 52);
+  }
+
+  .result-tittle h1{
+    color: white;
+    justify-content: center; 
+    display: flex;
+    position: relative;
+  }
+  @media screen and (max-width: 1000px) {
+          .search-results-container {
+            width: 99.2%;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            justify-content: center; 
+            background-color: rgb(7, 7, 7);
+            padding: 1px 1px; 
+          }
+  }
+  @media screen and (max-width:350px) {
+          .search-results-container {
+            width: 91.5%;
+            display: flex;
+            flex-wrap: wrap;
+            position: relative;
+            justify-content: center; 
+            background-color: rgb(7, 7, 7);
+  }
+          
+        }
+</style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+    <ul class="menu">
+        <li class="search">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+           <button onclick="searchPosts()" class="search-button">Search</button>
+        </li>
+        <li><a href="/HTML/index.html">Home</a></li>
+        <li class="dropdown">
+            <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+            <div id="aboutDropdown" class="dropdown-content">
+            <div class="dropdown-content">
+                <a href="/HTML/math.html">Math</a>
+                <a href="/HTML/physics.html">Physics</a>
+                <a href="/HTML/code.html">Code</a>
+            </div>
+        </li>
+        <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+        <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+        <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+    </ul>
+</header>
+
+
+
+
+
+
+
+
+<div class="search-results-container">
+  <div class="result-tittle">
+    <h1>Search...</h1>
+  </div>
+  
+</div>
+
+
+
+
+  
+  
+
+
+</body>
+</html>
