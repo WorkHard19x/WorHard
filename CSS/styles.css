@@ -118,7 +118,7 @@ nav ul li:last-child {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #777777;
+    background-color: #c0b4b4;
     /* min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(254, 6, 6, 0.2);
     z-index: 1; */
@@ -194,6 +194,7 @@ footer {
         width: 100%;
     }
 }
+
   @media screen and (max-width: 600px) {
     .home-img img{
         height: 300px;

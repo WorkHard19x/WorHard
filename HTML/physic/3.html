@@ -1,0 +1,555 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/CSS/physic.css">
+    </head>
+    <body>
+
+        <!-- header -->
+        <header class="header">
+            <!-- <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a> -->
+            <a href="/HTML/index.html" class="title-color" >
+              <span class="W">W</span>
+              <span class="O">O</span>
+              <span class="R">R</span>
+              <span class="K">K</span>
+              <span class="H">H</span>
+              <span class="A">A</span>
+              <span class="Rr">R</span>
+              <span class="D">D</span>
+              
+          </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li class="search">
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+                   <button onclick="searchPosts()" class="search-button">Search</button>
+                </li>
+                <li><a href="/HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                    <div class="dropdown-content">
+                        <a href="/HTML/math.html">Math</a>
+                        <a href="/HTML/physics.html">Physics</a>
+                        <a href="/HTML/code.html">Code</a>
+                    </div>
+                </li>
+                <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+                <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+                <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+            </ul>
+        </header>
+      
+        <!-- Slidershow -->
+
+      
+        <style>
+          .test1 {
+              width: 70%;
+              display: flex;
+              flex-wrap: wrap;
+              padding: 30px 20px;
+              background-color: black;
+              position: relative;
+              justify-content: center;
+              margin-left: auto;
+              margin-right: auto;
+          }
+          .news {
+              width: 70%;
+              background-color: rgb(107, 105, 105);
+              padding: 10px 20px;
+              margin-left: auto;
+              margin-right: auto;
+          }
+
+          .news span {
+              color: rgb(248, 86, 86);
+              font-size: 18px;
+              font-weight: bold;
+          }
+          .test2 {
+              width: calc(33.33% - 10px);
+              margin-bottom: 20px;
+              margin-right: 10px;
+              border-radius: 5px;
+              padding: 10px 15px;
+              flex-wrap: wrap;
+              display: inline-block;
+              box-sizing: border-box;
+              background-color: rgb(107, 105, 105);
+              justify-content: space-between;
+              display: block; /* Initially hide all test2 elements */
+          }
+          .news2 {
+            width: 70%;  
+            background-color: rgb(107, 105, 105);
+            padding: 40px 20px ;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+          }
+          .news2 .update{
+           width: 25%;
+           /* border: 1px solid red; */
+           background-color: rgb(138, 136, 136);
+           border-radius: 20px;
+           padding: 20px 20px;
+           text-align: center;
+          }
+          .news2 span{
+           color: rgb(247, 223, 9);
+           font-size: 28px;
+           font-weight:bold;
+
+          }
+          .test1 img {
+              width: 100%;
+              height: 250px;
+          }
+          .test2 span {
+              color: rgb(250, 161, 101);
+              font-weight: bold;
+          }
+          .test2 span p {
+              padding-left: 8px;
+          }
+          .test2 .time-ago {
+              padding-left: 8px;
+          }
+          .test2 .post-link {
+              text-decoration: none;
+          }
+          @media screen and (max-width: 1000px) {
+              .test2 span {
+                  font-size: 12px;
+                  color: rgb(250, 161, 101);
+              }
+              .test1 {
+                  display: flex;
+                  flex-wrap: wrap;
+                  border: 0.1px solid rgb(7, 7, 7);
+                  background-color: black;
+                  position: relative;
+                  justify-content: center;
+                  width: 99%;
+                  padding: 1px 1px;
+              }
+              .test2 {
+                  width: calc(33.33% - 10px);
+                  margin-bottom: 20px;
+                  margin-right: 10px;
+                  border-radius: 5px;
+                  padding: 1px 1px;
+                  flex-wrap: wrap;
+                  display: inline-block;
+                  box-sizing: border-box;
+                  background-color: rgb(107, 105, 105);
+                  justify-content: space-between;
+                  display: block; /* Initially hide all test2 elements */
+              }
+              .test1 img {
+                  max-width: 100%;
+                  max-height: 150px;
+              }
+          }
+          @media screen and (max-width: 350px) {
+              .test2 span {
+                  font-size: 1px;
+                  color: rgb(250, 161, 101);
+              }
+              .test1 {
+                  display: flex;
+                  flex-wrap: wrap;
+                  border: 0.1px solid rgb(7, 7, 7);
+                  background-color: black;
+                  position: relative;
+                  justify-content: center;
+                  width: 93.5%;
+              }
+          }
+      </style>
+        <div class="news">
+            <div class="update">
+              <span>Newly Updated ></span>
+            </div>
+        </div>
+        <div class="news2">
+          <div class="update">
+            <span>Physic</span>
+          </div>
+      </div>
+       
+        <div class="test1">
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/1.html" class="post-link">
+            <span><img src="/assit/physic/physic.jpg" alt=""></span>
+            <span><p>Physic</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/math/1.html" class="post-link">
+            <span><img src="/assit/math/math.jpg" alt=""></span>
+            <span><p>Math</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/code/1.html" class="post-link">
+            <span><img src="/assit/code/code.png" alt=""></span>
+            <span><p>Coding</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/2.html" class="post-link">
+            <span><img src="/assit/physic/physic1.jpg" alt=""></span>
+            <span><p>New technological advance for fast and efficient 3D imaging of objects</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/3.html" class="post-link">
+            <span><img src="/assit/physic/physic2.jpg" alt=""></span>
+            <span><p>New advances promise secure quantum computing at home</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/code/2.html" class="post-link">
+            <span><img src="/assit/code/code1.jpg" alt=""></span>
+            <span><p>Probabilistic AI that knows how well it’s working
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/code/3.html" class="post-link">
+            <span><img src="/assit/code/code2.png" alt=""></span>
+            <span><p>An easier way to get bugs out of programming languages
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/math/2.html" class="post-link">
+            <span><img src="/assit/math/math1.jpg" alt=""></span>
+            <span><p>A periodic table of primes: Research team claims that prime numbers can be predicted
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/math/3.html" class="post-link">
+            <span><img src="/assit/math/math3.jpg" alt=""></span>
+            <span><p>How can Australia solve the math teacher shortage? It can start by training more existing teachers to teach math
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          
+
+          
+          <!-- Pagination -->
+          <div id="pagination-container">
+            <ul class="pagination" id="pagination">
+                <!-- Pagination links will be dynamically added here -->
+            </ul>
+        </div>
+        
+        </div>
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const postsPerPage = 15;
+              const posts = document.querySelectorAll('.test2');
+              const totalPages = Math.ceil(posts.length / postsPerPage);
+              const pageLinks = [
+              "/HTML/physics.html",
+              "/HTML/physic/1.html",
+              "/HTML/physic/2.html",
+              "/HTML/physic/3.html",
+              "/HTML/physic/4.html",
+              "/HTML/physic/5.html",
+              "/HTML/physic/6.html",
+              "/HTML/physic/7.html",
+              "/HTML/physic/8.html",
+              "/HTML/physic/9.html",
+              "/HTML/physic/10.html",
+              ];
+        
+              function showPostsForPage(pageIndex) {
+                  const startIndex = pageIndex * postsPerPage;
+                  const endIndex = Math.min((pageIndex + 1) * postsPerPage, posts.length); // Ensure endIndex doesn't exceed the number of posts
+                  posts.forEach((post, index) => {
+                      if (index >= startIndex && index < endIndex) {
+                          post.style.display = 'block';
+                      } else {
+                          post.style.display = 'none';
+                      }
+                  });
+              }
+        
+              function generatePaginationLinks() {
+                  const paginationContainer = document.getElementById('pagination');
+                  const currentPage = getCurrentPage();
+                  const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+                  const endPage = Math.min(totalPages - 1, startPage + 4);
+                  for (let i = startPage; i <= endPage; i++) {
+                      const li = document.createElement('li');
+                      const a = document.createElement('a');
+                      a.href = pageLinks[i];
+                      a.textContent = `${i + 1}`;
+                      if (i === currentPage) {
+                          li.classList.add('active');
+                      }
+                      a.addEventListener('click', function() {
+                          handlePageClick(i);
+                      });
+                      li.appendChild(a);
+                      paginationContainer.appendChild(li);
+                  }
+              }
+        
+              generatePaginationLinks();
+              showPostsForPage(getCurrentPage());
+        
+              function handlePageClick(pageIndex) {
+                  const paginationLinks = document.querySelectorAll('.pagination li');
+                  paginationLinks.forEach(link => link.classList.remove('active'));
+                  paginationLinks[pageIndex].classList.add('active');
+                  showPostsForPage(pageIndex);
+              }
+        
+              function getCurrentPage() {
+                  const path = window.location.pathname;
+                  const currentPageIndex = pageLinks.findIndex(link => link === path);
+                  return currentPageIndex !== -1 ? currentPageIndex : 0;
+              }
+          });
+        </script>
+
+
+        
+      <!-- <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const postsPerPage = 9;
+              const posts = document.querySelectorAll('.test2');
+              const totalPages = Math.ceil(posts.length / postsPerPage);
+              const pageLinks = [
+                  "/HTML/index.html",
+                  "/HTML/mp/2.html",
+                  "/HTML/mp/3.html",
+                  "/HTML/mp/4.html",
+                  "/HTML/mp/5.html",
+                  "/HTML/mp/6.html",
+                  "/HTML/mp/7.html",
+                  "/HTML/mp/8.html",
+                  "/HTML/mp/9.html",
+                  "/HTML/mp/10.html",
+                  "/HTML/mp/11.html",
+                  "/HTML/mp/12.html",
+                  "/HTML/mp/13.html",
+                  "/HTML/mp/14.html",
+                  "/HTML/mp/15.html",
+                  "/HTML/mp/16.html",
+                  "/HTML/mp/17.html",
+                  "/HTML/mp/18.html",
+                  "/HTML/mp/19.html",
+                  "/HTML/mp/20.html",
+                  "/HTML/mp/21.html",
+                  "/HTML/mp/22.html",
+                  // Add more page links as needed
+              ];
+
+              if (totalPages > 1) {
+            const paginationContainer = document.getElementById('pagination');
+            const currentPage = getCurrentPage();
+            const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+            const endPage = Math.min(totalPages - 1, startPage + 4);
+            for (let i = startPage; i <= endPage; i++) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = pageLinks[i];
+                a.textContent = `${i + 1}`;
+                if (i === currentPage) {
+                    li.classList.add('active');
+                }
+                a.addEventListener('click', function() {
+                    handlePageClick(i);
+                });
+                li.appendChild(a);
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        // Hide posts exceeding the first page
+        posts.forEach((post, index) => {
+            if (index >= postsPerPage) {
+                post.style.display = 'none';
+            }
+        });
+
+        function handlePageClick(pageIndex) {
+            const paginationLinks = document.querySelectorAll('.pagination li');
+            paginationLinks.forEach(link => link.classList.remove('active'));
+            paginationLinks[pageIndex].classList.add('active');
+        }
+
+        function getCurrentPage() {
+            const path = window.location.pathname;
+            const currentPageIndex = pageLinks.findIndex(link => link === path);
+            return currentPageIndex !== -1 ? currentPageIndex : 0;
+        }
+    });
+      </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+          function searchPosts() {
+            var input, filter;
+            input = document.getElementById('searchInput');
+            filter = input.value.trim();
+            
+            // Get all post titles and image sources
+            var posts = document.querySelectorAll('.test2');
+            var titles = [];
+            var imageSrcs = [];
+            var aHerfs = [];
+            
+            posts.forEach(function(post) {
+              var paragraphText = post.querySelector('p').innerText.toLowerCase();
+              var title = paragraphText.trim();
+
+              var linkText = post.querySelector('a').innerText.toLowerCase();
+              var aherf = post.querySelector('a').getAttribute('href');
+
+              var imgAlt = post.querySelector('img').alt.toLowerCase();
+              var imgSrc = post.querySelector('img').getAttribute('src');
+              
+              titles.push(title);
+              aHerfs.push(aherf);
+              imageSrcs.push(imgSrc);
+              
+            });
+            
+            // Redirect to the search results page with the search query, titles, and image sources as parameters
+            window.location.href = '/HTML/result.html?q=' + encodeURIComponent(filter)
+              + '&titles=' + encodeURIComponent(JSON.stringify(titles)) 
+              + '&aHerfs=' + encodeURIComponent(JSON.stringify(aHerfs))
+              + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs));
+          }
+          </script>
+        
+
+
+    <!-- <script>
+           document.addEventListener("DOMContentLoaded", function() {
+          const paginationContainer = document.getElementById("pagination");
+          const pageLinks = [
+            "/HTML/index.html",
+            "/HTML/mp/2.html",
+            "/HTML/mp/3.html",
+            "/HTML/mp/4.html",
+            "/HTML/mp/5.html",
+            "/HTML/mp/6.html",
+            // Add more page links as needed
+          ];
+          const itemsPerPage = 1; // Change this according to your requirement
+          const totalPages = Math.ceil(pageLinks.length / itemsPerPage);
+
+          function renderPagination(currentPage) {
+            paginationContainer.innerHTML = ""; // Clear previous pagination links
+            for (let i = 1; i <= totalPages; i++) {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = pageLinks[i - 1];
+              a.textContent = i;
+              
+              // Check if it's the home page and apply active color to page 1
+              if (currentPage === 1 && pageLinks[i - 1] === "/HTML/index.html") {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              } else if (i === currentPage) {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              }
+              
+              li.appendChild(a);
+              paginationContainer.appendChild(li);
+            }
+          }
+
+          renderPagination(1); // Render pagination with page 1 as active when first loading index.html
+
+          function handlePageClick(event) {
+            event.preventDefault();
+            if (event.target.tagName === "A") {
+              const page = parseInt(event.target.textContent);
+              renderPagination(page);
+              const href = event.target.getAttribute("href");
+              window.location.href = href; // Open link in same window
+              sessionStorage.setItem("activePage", page); // Store active page in sessionStorage
+            }
+          }
+
+          paginationContainer.addEventListener("click", handlePageClick);
+
+          // Retrieve active page from sessionStorage and render pagination with it
+          const activePage = sessionStorage.getItem("activePage");
+          const initialPage = activePage ? parseInt(activePage) : 1;
+          renderPagination(initialPage);
+        });
+
+
+
+    </script> -->
+
+
+
+
+        
+
+      </div> 
+      </div> 
+      <footer>
+        <p>&copy; 2024 WorkHard. All rights reserved.</p>
+      </footer>
+
+        <script src="/script.js"></script>
+
+
+
+        
+
+       
+
+</body>
+</html>

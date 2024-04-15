@@ -6,7 +6,18 @@
 
         <!-- header -->
         <header class="header">
-            <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
+            <!-- <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a> -->
+            <a href="/HTML/index.html" class="title-color" >
+              <span class="W">W</span>
+              <span class="O">O</span>
+              <span class="R">R</span>
+              <span class="K">K</span>
+              <span class="H">H</span>
+              <span class="A">A</span>
+              <span class="Rr">R</span>
+              <span class="D">D</span>
+              
+          </a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
             <ul class="menu">
@@ -26,8 +37,6 @@
                 </li>
                 <li><a href="/HTML/about.html"  id="about-link">About</a></li>
                 <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
-                <li><a href="/HTML/testing.html" id="contract-link">testing</a></li>
-                <li><a href="/HTML/mp/page1.html" id="contract-link">page1</a></li>
                 <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
             </ul>
         </header>
@@ -37,30 +46,30 @@
             
           <div class="mySlides" id="mySlides">
             <div class="numbertext">1 / 6</div>
-            <img src="/assit/P1.jpg" >
+            <img src="/assit/physic/physic.jpg" >
           </div>
         
           <div class="mySlides" id="mySlides">
             <div class="numbertext">2 / 6</div>
-            <img src="/assit/undernav.jpg">
+            <img src="/assit/math/math.jpg">
           </div>
           <div class="mySlides" id="mySlides">
             <div class="numbertext">3 / 6</div>
-            <img src="/assit/P1.jpg" >
+            <img src="/assit/code/code.png" >
           </div>
         
           <div class="mySlides" id="mySlides">
             <div class="numbertext">4 / 6</div>
-            <img src="/assit/undernav.jpg">
+            <img src="/assit/math/math1.jpg">
           </div>
           <div class="mySlides" id="mySlides">
             <div class="numbertext">5 / 6</div>
-            <img src="/assit/P1.jpg" >
+            <img src="/assit/physic/physic1.jpg" >
           </div>
         
           <div class="mySlides" id="mySlides">
             <div class="numbertext">6 / 6</div>
-            <img src="/assit/undernav.jpg">
+            <img src="/assit/code/code2.png">
           </div>
 
           <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -73,148 +82,413 @@
         </div>
           <div class="row">
             <div class="column">
-              <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+              <img class="demo cursor" id="demo" src="/assit/physic/physic.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
             </div>
             <div class="column">
-                <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                <img class="demo cursor" src="/assit/math/math.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
             </div>
             <div class="column">
-                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Woods">
+                <img class="demo cursor" id="demo" src="/assit/code/code.png" style="width:100%" onclick="currentSlide(3)" alt="The Woods">
             </div>
             <div class="column">
-                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cinque Terre">
+                  <img class="demo cursor" src="/assit/math/math1.jpg" style="width:100%" onclick="currentSlide(4)" alt="A periodic table of primes: Research team claims that prime numbers can be predicted">
             </div>
             <div class="column">
-                <img class="demo cursor" id="demo" src="/assit/P1.jpg" style="width:100%" onclick="currentSlide(5)" alt="The Woods">
+                <img class="demo cursor" id="demo" src="/assit/physic/physic1.jpg" style="width:100%" onclick="currentSlide(5)" alt="New technological advance for fast and efficient 3D imaging of objects">
             </div>
             <div class="column">
-                  <img class="demo cursor" src="/assit/undernav.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
+                  <img class="demo cursor" src="/assit/code/code2.png" style="width:100%" onclick="currentSlide(6)" alt="An easier way to get bugs out of programming languages">
             </div>
         </div> 
       
         <style>
           .test1 {
-            width: 70%; 
-            display: flex;
-            flex-wrap: wrap;
-            padding: 30px 20px ;
-            border: 0.1px solid rgb(128, 126, 126);
-            background-color: black;
-            position: relative;
-            justify-content: center; 
-            margin-left: auto;
-            margin-right: auto;
-
-           
+              width: 70%;
+              display: flex;
+              flex-wrap: wrap;
+              padding: 30px 20px;
+              background-color: black;
+              position: relative;
+              justify-content: center;
+              margin-left: auto;
+              margin-right: auto;
           }
-          .test2{
-            width: calc(33.33% - 10px);
-            margin-bottom: 20px;
-            margin-right: 10px;
-            padding: 30px 40px; 
-            flex-wrap: wrap;
-            display: inline-block;
-            box-sizing: border-box;
-            background-color: rgb(128, 126, 126);
-            border: 1px solid #fa0909; /* Add border to each search result */
-            justify-content: space-between;
-            display: block; /* Initially hide all test2 elements */
+          .news {
+              width: 70%;
+              background-color: rgb(107, 105, 105);
+              padding: 10px 20px;
+              margin-left: auto;
+              margin-right: auto;
           }
-
+          .news .update {
+              width: 25%;
+              background-color: rgb(85, 83, 83);
+              padding: 20px 20px;
+          }
+          .news span {
+              color: rgb(248, 86, 86);
+              font-size: 18px;
+              font-weight: bold;
+          }
+          .test2 {
+              width: calc(33.33% - 10px);
+              margin-bottom: 20px;
+              margin-right: 10px;
+              border-radius: 5px;
+              padding: 10px 15px;
+              flex-wrap: wrap;
+              display: inline-block;
+              box-sizing: border-box;
+              background-color: rgb(107, 105, 105);
+              justify-content: space-between;
+              display: block; /* Initially hide all test2 elements */
+          }
           .test1 img {
-            max-width: 100%; /* Ensure image fits within its container */
+              width: 100%;
+              height: 250px;
           }
           .test2 span {
-            color:rgb(12, 12, 12); /* Ensure image fits within its container */
+              color: rgb(250, 161, 101);
+              font-weight: bold;
           }
-
-          .test2 .post-link{
-            text-decoration: none;
+          .test2 span p {
+              padding-left: 8px;
           }
-          
-        </style>
+          .test2 .time-ago {
+              padding-left: 8px;
+          }
+          .test2 .post-link {
+              text-decoration: none;
+          }
+          @media screen and (max-width: 1000px) {
+              .test2 span {
+                  font-size: 12px;
+                  color: rgb(250, 161, 101);
+              }
+              .test1 {
+                  display: flex;
+                  flex-wrap: wrap;
+                  border: 0.1px solid rgb(7, 7, 7);
+                  background-color: black;
+                  position: relative;
+                  justify-content: center;
+                  width: 99%;
+                  padding: 1px 1px;
+              }
+                  .news {
+                width: 91%;  
+                background-color: rgb(107, 105, 105);
+                padding: 10px 20px ;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .news .update{
+              width: 40%;
+              /* border: 1px solid red; */
+              background-color: rgb(85, 83, 83);
+              border-radius: 20px;
+              padding: 20px 28px;
+              }
+              .test2 {
+                  width: calc(33.33% - 10px);
+                  margin-bottom: 20px;
+                  margin-right: 10px;
+                  border-radius: 5px;
+                  padding: 1px 1px;
+                  flex-wrap: wrap;
+                  display: inline-block;
+                  box-sizing: border-box;
+                  background-color: rgb(107, 105, 105);
+                  justify-content: space-between;
+                  display: block; /* Initially hide all test2 elements */
+              }
+              .test1 img {
+                  max-width: 100%;
+                  max-height: 150px;
+              }
+          }
+          @media screen and (max-width: 350px) {
+              .test2 span {
+                  font-size: 1px;
+                  color: rgb(250, 161, 101);
+              }
+              .test1 {
+                  display: flex;
+                  flex-wrap: wrap;
+                  border: 0.1px solid rgb(7, 7, 7);
+                  background-color: black;
+                  position: relative;
+                  justify-content: center;
+                  width: 93.5%;
+              }
+          }
+      </style>
+        <div class="news">
+            <div class="update">
+              <span>Newly Updated ></span>
+            </div>
+        </div>
         
+       
         <div class="test1">
           <div class="test2" data-title="">
-            <a href="/HTML/index.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 1</p></span>
+            <a href="/HTML/physic/1.html" class="post-link">
+            <span><img src="/assit/physic/physic.jpg" alt=""></span>
+            <span><p>Physic</p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
           <div class="test2" data-title="Link 2">
-            <a href="/HTML/mp/7.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 2</p></span>
+            <a href="/HTML/math/1.html" class="post-link">
+            <span><img src="/assit/math/math.jpg" alt=""></span>
+            <span><p>Math</p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
           <div class="test2" data-title="Hopely">
-            <a href="/HTML/mp/6.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Hopely</p></span>
+            <a href="/HTML/code/1.html" class="post-link">
+            <span><img src="/assit/code/code.png" alt=""></span>
+            <span><p>Coding</p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
           <div class="test2" data-title="">
-            <a href="/HTML/mp/5.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 1</p></span>
-            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
-            </a>
-          </div>
-
-          <div class="test2" data-title="Link 2">
-            <a href="/HTML/mp/7.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 2</p></span>
-            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
-            </a>
-          </div>
-
-          <div class="test2" data-title="Hopely">
-            <a href="/HTML/mp/6.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Hopely</p></span>
+            <a href="/HTML/physic/2.html" class="post-link">
+            <span><img src="/assit/physic/physic1.jpg" alt=""></span>
+            <span><p>New technological advance for fast and efficient 3D imaging of objects</p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
           <div class="test2" data-title="">
-            <a href="/HTML/mp/5.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 1</p></span>
+            <a href="/HTML/physic/3.html" class="post-link">
+            <span><img src="/assit/physic/physic2.jpg" alt=""></span>
+            <span><p>New advances promise secure quantum computing at home</p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
-          <div class="test2" data-title="Link 2">
-            <a href="/HTML/mp/7.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Post Content 2</p></span>
+          <div class="test2" data-title="">
+            <a href="/HTML/code/2.html" class="post-link">
+            <span><img src="/assit/code/code1.jpg" alt=""></span>
+            <span><p>Probabilistic AI that knows how well it’s working
+            </p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
-          <div class="test2" data-title="Hopely">
-            <a href="/HTML/mp/6.html" class="post-link">
-            <span><img src="/assit/P1.jpg" alt=""></span>
-            <span><p>Hopely</p></span>
+          <div class="test2" data-title="">
+            <a href="/HTML/code/3.html" class="post-link">
+            <span><img src="/assit/code/code2.png" alt=""></span>
+            <span><p>An easier way to get bugs out of programming languages
+            </p></span>
             <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
             </a>
           </div>
 
+          <div class="test2" data-title="">
+            <a href="/HTML/math/2.html" class="post-link">
+            <span><img src="/assit/math/math1.jpg" alt=""></span>
+            <span><p>A periodic table of primes: Research team claims that prime numbers can be predicted
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/math/3.html" class="post-link">
+            <span><img src="/assit/math/math3.jpg" alt=""></span>
+            <span><p>How can Australia solve the math teacher shortage? It can start by training more existing teachers to teach math
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          
+
+          
           <!-- Pagination -->
           <div id="pagination-container">
             <ul class="pagination" id="pagination">
+                <!-- Pagination links will be dynamically added here -->
             </ul>
-          </div>
-        
         </div>
         
+        </div>
+
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const postsPerPage = 12;
+              const posts = document.querySelectorAll('.test2');
+              const totalPages = Math.ceil(posts.length / postsPerPage);
+              const pageLinks = [
+              "/HTML/index.html",
+              "/HTML/mp/2.html",
+              "/HTML/mp/3.html",
+              "/HTML/mp/4.html",
+              "/HTML/mp/5.html",
+              "/HTML/mp/6.html",
+              "/HTML/mp/7.html",
+              "/HTML/mp/8.html",
+              "/HTML/mp/9.html",
+              "/HTML/mp/10.html",
+              "/HTML/mp/11.html",
+              "/HTML/mp/12.html",
+              "/HTML/mp/13.html",
+              "/HTML/mp/14.html",
+              "/HTML/mp/15.html",
+              "/HTML/mp/16.html",
+              "/HTML/mp/17.html",
+              "/HTML/mp/18.html",
+              "/HTML/mp/19.html",
+              "/HTML/mp/20.html",
+              "/HTML/mp/21.html",
+              "/HTML/mp/22.html"
+              ];
+        
+              function showPostsForPage(pageIndex) {
+                  const startIndex = pageIndex * postsPerPage;
+                  const endIndex = Math.min((pageIndex + 1) * postsPerPage, posts.length); // Ensure endIndex doesn't exceed the number of posts
+                  posts.forEach((post, index) => {
+                      if (index >= startIndex && index < endIndex) {
+                          post.style.display = 'block';
+                      } else {
+                          post.style.display = 'none';
+                      }
+                  });
+              }
+        
+              function generatePaginationLinks() {
+                  const paginationContainer = document.getElementById('pagination');
+                  const currentPage = getCurrentPage();
+                  const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+                  const endPage = Math.min(totalPages - 1, startPage + 4);
+                  for (let i = startPage; i <= endPage; i++) {
+                      const li = document.createElement('li');
+                      const a = document.createElement('a');
+                      a.href = pageLinks[i];
+                      a.textContent = `${i + 1}`;
+                      if (i === currentPage) {
+                          li.classList.add('active');
+                      }
+                      a.addEventListener('click', function() {
+                          handlePageClick(i);
+                      });
+                      li.appendChild(a);
+                      paginationContainer.appendChild(li);
+                  }
+              }
+        
+              generatePaginationLinks();
+              showPostsForPage(getCurrentPage());
+        
+              function handlePageClick(pageIndex) {
+                  const paginationLinks = document.querySelectorAll('.pagination li');
+                  paginationLinks.forEach(link => link.classList.remove('active'));
+                  paginationLinks[pageIndex].classList.add('active');
+                  showPostsForPage(pageIndex);
+              }
+        
+              function getCurrentPage() {
+                  const path = window.location.pathname;
+                  const currentPageIndex = pageLinks.findIndex(link => link === path);
+                  return currentPageIndex !== -1 ? currentPageIndex : 0;
+              }
+          });
+        </script>
+
+
+        
+      <!-- <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const postsPerPage = 9;
+              const posts = document.querySelectorAll('.test2');
+              const totalPages = Math.ceil(posts.length / postsPerPage);
+              const pageLinks = [
+                  "/HTML/index.html",
+                  "/HTML/mp/2.html",
+                  "/HTML/mp/3.html",
+                  "/HTML/mp/4.html",
+                  "/HTML/mp/5.html",
+                  "/HTML/mp/6.html",
+                  "/HTML/mp/7.html",
+                  "/HTML/mp/8.html",
+                  "/HTML/mp/9.html",
+                  "/HTML/mp/10.html",
+                  "/HTML/mp/11.html",
+                  "/HTML/mp/12.html",
+                  "/HTML/mp/13.html",
+                  "/HTML/mp/14.html",
+                  "/HTML/mp/15.html",
+                  "/HTML/mp/16.html",
+                  "/HTML/mp/17.html",
+                  "/HTML/mp/18.html",
+                  "/HTML/mp/19.html",
+                  "/HTML/mp/20.html",
+                  "/HTML/mp/21.html",
+                  "/HTML/mp/22.html",
+                  // Add more page links as needed
+              ];
+
+              if (totalPages > 1) {
+            const paginationContainer = document.getElementById('pagination');
+            const currentPage = getCurrentPage();
+            const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+            const endPage = Math.min(totalPages - 1, startPage + 4);
+            for (let i = startPage; i <= endPage; i++) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = pageLinks[i];
+                a.textContent = `${i + 1}`;
+                if (i === currentPage) {
+                    li.classList.add('active');
+                }
+                a.addEventListener('click', function() {
+                    handlePageClick(i);
+                });
+                li.appendChild(a);
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        // Hide posts exceeding the first page
+        posts.forEach((post, index) => {
+            if (index >= postsPerPage) {
+                post.style.display = 'none';
+            }
+        });
+
+        function handlePageClick(pageIndex) {
+            const paginationLinks = document.querySelectorAll('.pagination li');
+            paginationLinks.forEach(link => link.classList.remove('active'));
+            paginationLinks[pageIndex].classList.add('active');
+        }
+
+        function getCurrentPage() {
+            const path = window.location.pathname;
+            const currentPageIndex = pageLinks.findIndex(link => link === path);
+            return currentPageIndex !== -1 ? currentPageIndex : 0;
+        }
+    });
+      </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script>
           function searchPosts() {
@@ -252,99 +526,75 @@
           }
           </script>
         
-        <!-- <div id="pagination-container">
-          <ul class="pagination" id="pagination">
-          </ul>
-          </div> -->
-          <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  const paginationContainer = document.getElementById("pagination");
-  const pageLinks = [
-    "/HTML/index.html",
-    "/HTML/mp/2.html",
-    "/HTML/mp/3.html",
-    "/HTML/mp/4.html",
-    "/HTML/mp/5.html",
-    "/HTML/mp/6.html",
-    // Add more page links as needed
-  ];
-  const itemsPerPage = 1; // Change this according to your requirement
-  const totalPages = Math.ceil(pageLinks.length / itemsPerPage);
-  const maxVisiblePages = 5; // Number of pages to show in the pagination
-
-  function renderPagination(currentPage) {
-    paginationContainer.innerHTML = ""; // Clear previous pagination links
-    const startIndex = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-    const endIndex = Math.min(totalPages, startIndex + maxVisiblePages - 1);
-
-    // Render first page button if currentPage is not the first page
-
-      renderPaginationButton('First', 1);
-    
-
-    for (let i = startIndex; i <= endIndex; i++) {
-      renderPaginationButton(i, i);
-    }
-
-    // Render last page button if currentPage is not the last page
-    if (currentPage < totalPages) {
-      renderPaginationButton('Last', totalPages);
-    }
-  }
-
-  function renderPaginationButton(label, page) {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  a.href = pageLinks[page - 1];
-  a.textContent = label;
-  
-  // Check if the current page matches the active page stored in sessionStorage
-  const activePage = sessionStorage.getItem("activePage");
-  if (activePage && parseInt(activePage) === page) {
-    a.classList.add("active");
-    a.style.color = '#007bff'; // Apply text color directly to the active link
-  }
-  
-  li.appendChild(a);
-  paginationContainer.appendChild(li);
-}
 
 
-  function handlePageClick(event) {
-  event.preventDefault();
-  if (event.target.tagName === "A") {
-    const page = parseInt(event.target.textContent);
-    const href = event.target.getAttribute("href");
-    window.location.href = href; // Open link in the same window
-    sessionStorage.setItem("activePage", page); // Store the active page in sessionStorage
+    <!-- <script>
+           document.addEventListener("DOMContentLoaded", function() {
+          const paginationContainer = document.getElementById("pagination");
+          const pageLinks = [
+            "/HTML/index.html",
+            "/HTML/mp/2.html",
+            "/HTML/mp/3.html",
+            "/HTML/mp/4.html",
+            "/HTML/mp/5.html",
+            "/HTML/mp/6.html",
+            // Add more page links as needed
+          ];
+          const itemsPerPage = 1; // Change this according to your requirement
+          const totalPages = Math.ceil(pageLinks.length / itemsPerPage);
 
-    // Remove "active" class from all links
-    const links = paginationContainer.querySelectorAll("a");
-    links.forEach(link => {
-      link.classList.remove("active");
-    });
+          function renderPagination(currentPage) {
+            paginationContainer.innerHTML = ""; // Clear previous pagination links
+            for (let i = 1; i <= totalPages; i++) {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = pageLinks[i - 1];
+              a.textContent = i;
+              
+              // Check if it's the home page and apply active color to page 1
+              if (currentPage === 1 && pageLinks[i - 1] === "/HTML/index.html") {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              } else if (i === currentPage) {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              }
+              
+              li.appendChild(a);
+              paginationContainer.appendChild(li);
+            }
+          }
 
-    // Add "active" class to the clicked link
-    event.target.classList.add("active");
-    event.target.style.backgroundColor = '#007bff'; // Apply background color directly to the clicked link
-    event.target.style.color = '#fff'; // Apply text color directly to the clicked link
-  }
-}
+          renderPagination(1); // Render pagination with page 1 as active when first loading index.html
+
+          function handlePageClick(event) {
+            event.preventDefault();
+            if (event.target.tagName === "A") {
+              const page = parseInt(event.target.textContent);
+              renderPagination(page);
+              const href = event.target.getAttribute("href");
+              window.location.href = href; // Open link in same window
+              sessionStorage.setItem("activePage", page); // Store active page in sessionStorage
+            }
+          }
+
+          paginationContainer.addEventListener("click", handlePageClick);
+
+          // Retrieve active page from sessionStorage and render pagination with it
+          const activePage = sessionStorage.getItem("activePage");
+          const initialPage = activePage ? parseInt(activePage) : 1;
+          renderPagination(initialPage);
+        });
 
 
-  paginationContainer.addEventListener("click", handlePageClick);
 
-  // Retrieve active page from sessionStorage and render pagination with it
-  const activePage = sessionStorage.getItem("activePage");
-  const initialPage = activePage ? parseInt(activePage) : 1;
-  renderPagination(initialPage);
-});
+    </script> -->
 
-  </script>
 
 
 
         
+
       </div> 
       </div> 
       <footer>

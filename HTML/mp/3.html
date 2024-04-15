@@ -6,7 +6,18 @@
 
         <!-- header -->
         <header class="header">
-            <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a>
+            <!-- <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a> -->
+            <a href="/HTML/index.html" class="title-color" >
+              <span class="W">W</span>
+              <span class="O">O</span>
+              <span class="R">R</span>
+              <span class="K">K</span>
+              <span class="H">H</span>
+              <span class="A">A</span>
+              <span class="Rr">R</span>
+              <span class="D">D</span>
+              
+          </a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
             <ul class="menu">
@@ -164,6 +175,20 @@
                   width: 99%;
                   padding: 1px 1px;
               }
+                  .news {
+                width: 91%;  
+                background-color: rgb(107, 105, 105);
+                padding: 10px 20px ;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              .news .update{
+              width: 40%;
+              /* border: 1px solid red; */
+              background-color: rgb(85, 83, 83);
+              border-radius: 20px;
+              padding: 20px 28px;
+              }
               .test2 {
                   width: calc(33.33% - 10px);
                   margin-bottom: 20px;
@@ -297,7 +322,7 @@
 
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-              const postsPerPage = 15;
+              const postsPerPage = 12;
               const posts = document.querySelectorAll('.test2');
               const totalPages = Math.ceil(posts.length / postsPerPage);
               const pageLinks = [
@@ -375,7 +400,96 @@
               }
           });
         </script>
+
+
         
+      <!-- <script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const postsPerPage = 9;
+              const posts = document.querySelectorAll('.test2');
+              const totalPages = Math.ceil(posts.length / postsPerPage);
+              const pageLinks = [
+                  "/HTML/index.html",
+                  "/HTML/mp/2.html",
+                  "/HTML/mp/3.html",
+                  "/HTML/mp/4.html",
+                  "/HTML/mp/5.html",
+                  "/HTML/mp/6.html",
+                  "/HTML/mp/7.html",
+                  "/HTML/mp/8.html",
+                  "/HTML/mp/9.html",
+                  "/HTML/mp/10.html",
+                  "/HTML/mp/11.html",
+                  "/HTML/mp/12.html",
+                  "/HTML/mp/13.html",
+                  "/HTML/mp/14.html",
+                  "/HTML/mp/15.html",
+                  "/HTML/mp/16.html",
+                  "/HTML/mp/17.html",
+                  "/HTML/mp/18.html",
+                  "/HTML/mp/19.html",
+                  "/HTML/mp/20.html",
+                  "/HTML/mp/21.html",
+                  "/HTML/mp/22.html",
+                  // Add more page links as needed
+              ];
+
+              if (totalPages > 1) {
+            const paginationContainer = document.getElementById('pagination');
+            const currentPage = getCurrentPage();
+            const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+            const endPage = Math.min(totalPages - 1, startPage + 4);
+            for (let i = startPage; i <= endPage; i++) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = pageLinks[i];
+                a.textContent = `${i + 1}`;
+                if (i === currentPage) {
+                    li.classList.add('active');
+                }
+                a.addEventListener('click', function() {
+                    handlePageClick(i);
+                });
+                li.appendChild(a);
+                paginationContainer.appendChild(li);
+            }
+        }
+
+        // Hide posts exceeding the first page
+        posts.forEach((post, index) => {
+            if (index >= postsPerPage) {
+                post.style.display = 'none';
+            }
+        });
+
+        function handlePageClick(pageIndex) {
+            const paginationLinks = document.querySelectorAll('.pagination li');
+            paginationLinks.forEach(link => link.classList.remove('active'));
+            paginationLinks[pageIndex].classList.add('active');
+        }
+
+        function getCurrentPage() {
+            const path = window.location.pathname;
+            const currentPageIndex = pageLinks.findIndex(link => link === path);
+            return currentPageIndex !== -1 ? currentPageIndex : 0;
+        }
+    });
+      </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <script>
           function searchPosts() {
             var input, filter;
@@ -414,7 +528,68 @@
         
 
 
-    
+    <!-- <script>
+           document.addEventListener("DOMContentLoaded", function() {
+          const paginationContainer = document.getElementById("pagination");
+          const pageLinks = [
+            "/HTML/index.html",
+            "/HTML/mp/2.html",
+            "/HTML/mp/3.html",
+            "/HTML/mp/4.html",
+            "/HTML/mp/5.html",
+            "/HTML/mp/6.html",
+            // Add more page links as needed
+          ];
+          const itemsPerPage = 1; // Change this according to your requirement
+          const totalPages = Math.ceil(pageLinks.length / itemsPerPage);
+
+          function renderPagination(currentPage) {
+            paginationContainer.innerHTML = ""; // Clear previous pagination links
+            for (let i = 1; i <= totalPages; i++) {
+              const li = document.createElement("li");
+              const a = document.createElement("a");
+              a.href = pageLinks[i - 1];
+              a.textContent = i;
+              
+              // Check if it's the home page and apply active color to page 1
+              if (currentPage === 1 && pageLinks[i - 1] === "/HTML/index.html") {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              } else if (i === currentPage) {
+                a.classList.add("active");
+                a.style.color = '#007bff'; // Apply active color to the active link
+              }
+              
+              li.appendChild(a);
+              paginationContainer.appendChild(li);
+            }
+          }
+
+          renderPagination(1); // Render pagination with page 1 as active when first loading index.html
+
+          function handlePageClick(event) {
+            event.preventDefault();
+            if (event.target.tagName === "A") {
+              const page = parseInt(event.target.textContent);
+              renderPagination(page);
+              const href = event.target.getAttribute("href");
+              window.location.href = href; // Open link in same window
+              sessionStorage.setItem("activePage", page); // Store active page in sessionStorage
+            }
+          }
+
+          paginationContainer.addEventListener("click", handlePageClick);
+
+          // Retrieve active page from sessionStorage and render pagination with it
+          const activePage = sessionStorage.getItem("activePage");
+          const initialPage = activePage ? parseInt(activePage) : 1;
+          renderPagination(initialPage);
+        });
+
+
+
+    </script> -->
+
 
 
 

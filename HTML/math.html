@@ -1,50 +1,411 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="/CSS/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html>
+    <head>
+        <link rel="stylesheet" href="/CSS/physic.css">
+        <title>Home</title>
+      </head>
+    <body>
 
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <a href="/HTML/index.html"><img src="/logo/logo.png" alt="Logo"></a>
+        <!-- header -->
+        <header class="header">
+            <!-- <a href="/HTML/index.html" class="logo" ><img src="/logo/logo.png"></a> -->
+            <a href="/HTML/index.html" class="title-color" >
+              <span class="W">W</span>
+              <span class="O">O</span>
+              <span class="R">R</span>
+              <span class="K">K</span>
+              <span class="H">H</span>
+              <span class="A">A</span>
+              <span class="Rr">R</span>
+              <span class="D">D</span>
+              
+          </a>
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+            <ul class="menu">
+                <li class="search">
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search for posts...">
+                   <button onclick="searchPosts()" class="search-button">Search</button>
+                </li>
+                <li><a href="/HTML/index.html">Home</a></li>
+                <li class="dropdown">
+                    <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
+                    <div id="aboutDropdown" class="dropdown-content">
+                    <div class="dropdown-content">
+                        <a href="/HTML/math.html">Math</a>
+                        <a href="/HTML/physics.html">Physics</a>
+                        <a href="/HTML/code.html">Code</a>
+                    </div>
+                </li>
+                <li><a href="/HTML/about.html"  id="about-link">About</a></li>
+                <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
+                <li><a href="/HTML/Login.html" id="contract-link">Log In</a></li>
+            </ul>
+        </header>
+      
+        <!-- Slidershow -->
+ 
+        <style>
+          .test1 {
+            width: 70%; 
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 20px ;
+            background-color: black;
+            position: relative;
+            justify-content: center; 
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .news {
+            width: 70%;  
+            background-color: rgb(107, 105, 105);
+            padding: 10px 20px ;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            top: 11;
+          }
+
+          .news span{
+           color: rgb(248, 86, 86);
+           font-size: 18px;
+           font-weight:bold;
+          }
+
+          .news2 {
+            width: 70%;  
+            background-color: rgb(107, 105, 105);
+            padding: 40px 20px ;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+          }
+          .news2 .update{
+           width: 25%;
+           /* border: 1px solid red; */
+           background-color: rgb(138, 136, 136);
+           border-radius: 20px;
+           padding: 20px 20px;
+           text-align: center;
+          }
+          .news2 span{
+           color: rgb(247, 223, 9);
+           font-size: 28px;
+           font-weight:bold;
+
+          }
+          
+          
+          .test2{
+            width: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            padding: 10px 15px; 
+            flex-wrap: wrap;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color:  rgb(107, 105, 105);
+            /* border: 1px solid #fa0909;  */
+            justify-content: space-between;
+            display: block; /* Initially hide all test2 elements */
+
+          }
+
+          .test1 img {
+            width: 100%; /* Ensure image fits within its container */
+            height: 250px;
+          }
+          .test2 span {
+            color:rgb(250, 161, 101); /* Ensure image fits within its container */
+            font-weight:bold;
+          }
+          .test2 span p{
+            padding-left: 8px;
+          }
+          .test2  .time-ago{
+            padding-left: 8px;
+          }
+          .test2 .post-link{
+            text-decoration: none;
+          }
+         
+        @media screen and (max-width: 1000px) {
+            .test2 span {
+            font-size: 12px;
+            color:rgb(250, 161, 101); /* Ensure image fits within its container */
+          }
+          .test1 {
+              display: flex;
+              flex-wrap: wrap;
+              border: 0.1px solid rgb(7, 7, 7);
+              background-color: black;
+              position: relative;
+              justify-content: center; 
+              width: 99%;
+              padding: 1px 1px ;
+              
+            }
+          .test2{
+            width: calc(33.33% - 10px);
+            margin-bottom: 20px;
+            margin-right: 10px;
+            border-radius: 5px;
+            padding: 1px 1px; 
+            flex-wrap: wrap;
+            display: inline-block;
+            box-sizing: border-box;
+            background-color:  rgb(107, 105, 105);
+            /* border: 1px solid #fa0909;  */
+            justify-content: space-between;
+            display: block; /* Initially hide all test2 elements */
+
+          }
+          .test1 img {
+            max-width: 100%; /* Ensure image fits within its container */
+            max-height: 150px;
+          }
+        }
+        @media screen and (max-width:350px) {
+            .test2 span {
+            font-size: 1px;
+            color:rgb(250, 161, 101); /* Ensure image fits within its container */
+          }
+          .test1 {
+              display: flex;
+              flex-wrap: wrap;
+              border: 0.1px solid rgb(7, 7, 7);
+              background-color: black;
+              position: relative;
+              justify-content: center; 
+              width: 93.5%;
+              
+            }
+        }
+        
+        </style>
+        <div class="news">
+            <div class="update">
+              <span>Newly Updated ></span>
+            </div>
         </div>
-        <h1>Welcome to WorkHard</h1>
-    </header>
+        <div class="news2">
+            <div class="update">
+              <span>Math</span>
+            </div>
+        </div>
+        <div class="test1">
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/1.html" class="post-link">
+            <span><img src="/assit/physic/physic.jpg" alt=""></span>
+            <span><p>Physic</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
 
-    <nav>
-        <ul>
-            <li><a href="/HTML/index.html" id="home-link">Home</a></li>
-            <li class="dropdown">
-                <button onclick="toggleDropdown()" class="dropbtn">Subjects</button>
-                <div id="aboutDropdown" class="dropdown-content">
-                <div class="dropdown-content">
-                    <a href="/HTML/math.html">Math</a>
-                    <a href="/HTML/physics.html">Physics</a>
-                    <a href="/HTML/code.html">Code</a>
-                </div>
-            </li>
-            <li><a href="/HTML/about.html"  id="about-link">About</a></li>
-            <li><a href="/HTML/contract.html" id="contract-link">Contact</a></li>
-        </ul>
-    </nav>
-    <div class = "Home-nav">
-        <h2>Welcome to my Workhard</h2>
+          <div class="test2" data-title="Link 2">
+            <a href="/HTML/math/1.html" class="post-link">
+            <span><img src="/assit/math/math.jpg" alt=""></span>
+            <span><p>Math</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
 
-    </div>
+          <div class="test2" data-title="Hopely">
+            <a href="/HTML/code/1.html" class="post-link">
+            <span><img src="/assit/code/code.png" alt=""></span>
+            <span><p>Coding</p></span>
+            <span class="time-ago" data-timestamp="2024-04-10T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/2.html" class="post-link">
+            <span><img src="/assit/physic/physic1.jpg" alt=""></span>
+            <span><p>New technological advance for fast and efficient 3D imaging of objects</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/physic/3.html" class="post-link">
+            <span><img src="/assit/physic/physic2.jpg" alt=""></span>
+            <span><p>New advances promise secure quantum computing at home</p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/code/2.html" class="post-link">
+            <span><img src="/assit/code/code1.jpg" alt=""></span>
+            <span><p>Probabilistic AI that knows how well it’s working
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/code/3.html" class="post-link">
+            <span><img src="/assit/code/code2.png" alt=""></span>
+            <span><p>An easier way to get bugs out of programming languages
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/math/2.html" class="post-link">
+            <span><img src="/assit/math/math1.jpg" alt=""></span>
+            <span><p>A periodic table of primes: Research team claims that prime numbers can be predicted
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+          <div class="test2" data-title="">
+            <a href="/HTML/math/3.html" class="post-link">
+            <span><img src="/assit/math/math3.jpg" alt=""></span>
+            <span><p>How can Australia solve the math teacher shortage? It can start by training more existing teachers to teach math
+            </p></span>
+            <span class="time-ago" data-timestamp="2024-03-25T12:00:00Z"></span>
+            </a>
+          </div>
+
+
+          
+
+          
+          <!-- Pagination -->
+  <div id="pagination-container">
+    <ul class="pagination" id="pagination">
+    </ul>
+  </div>
         
-        
-    
+  </div>
 
-    <footer>
+<!-- Pagination -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const postsPerPage = 15;
+    const posts = document.querySelectorAll('.test2');
+    const totalPages = Math.ceil(posts.length / postsPerPage);
+    const pageLinks = [
+        "/HTML/math.html",
+        "/HTML/math/1.html",
+        "/HTML/math/2.html",
+        "/HTML/math/3.html",
+        "/HTML/math/4.html",
+        "/HTML/math/5.html",
+        "/HTML/math/6.html",
+        "/HTML/math/7.html",
+        "/HTML/math/8.html",
+        "/HTML/math/9.html",
+        "/HTML/math/10.html",
+        // Add more page links as needed
+    ];
+    // Function to show the appropriate posts for the current page
+    function showPostsForPage(pageIndex) {
+        posts.forEach((post, index) => {
+            if (index >= pageIndex * postsPerPage && index < (pageIndex + 1) * postsPerPage) {
+                post.style.display = 'block';
+            } else {
+                post.style.display = 'none';
+            }
+        });
+    }
+    if (totalPages > 1) {
+        const paginationContainer = document.getElementById('pagination');
+        const currentPage = getCurrentPage();
+        const startPage = Math.max(0, currentPage - 2); // Display up to 5 pages
+        const endPage = Math.min(totalPages - 1, startPage + 4);
+        for (let i = startPage; i <= endPage; i++) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = pageLinks[i];
+            a.textContent = `${i + 1}`;
+            if (i === currentPage) {
+                li.classList.add('active');
+            }
+            a.addEventListener('click', function() {
+                handlePageClick(i);
+            });
+            li.appendChild(a);
+            paginationContainer.appendChild(li);
+        }
+    }
+    // Initially show posts for the current page
+    showPostsForPage(getCurrentPage());
+
+    function handlePageClick(pageIndex) {
+        const paginationLinks = document.querySelectorAll('.pagination li');
+        paginationLinks.forEach(link => link.classList.remove('active'));
+        paginationLinks[pageIndex].classList.add('active');
+        showPostsForPage(pageIndex);
+    }
+
+    function getCurrentPage() {
+        const path = window.location.pathname;
+        const currentPageIndex = pageLinks.findIndex(link => link === path);
+        return currentPageIndex !== -1 ? currentPageIndex : 0;
+    }
+});
+
+</script>
+
+<!-- Search -->
+<script>
+          function searchPosts() {
+            var input, filter;
+            input = document.getElementById('searchInput');
+            filter = input.value.trim();
+            
+            // Get all post titles and image sources
+            var posts = document.querySelectorAll('.test2');
+            var titles = [];
+            var imageSrcs = [];
+            var aHerfs = [];
+            
+            posts.forEach(function(post) {
+              var paragraphText = post.querySelector('p').innerText.toLowerCase();
+              var title = paragraphText.trim();
+
+              var linkText = post.querySelector('a').innerText.toLowerCase();
+              var aherf = post.querySelector('a').getAttribute('href');
+
+              var imgAlt = post.querySelector('img').alt.toLowerCase();
+              var imgSrc = post.querySelector('img').getAttribute('src');
+              
+              titles.push(title);
+              aHerfs.push(aherf);
+              imageSrcs.push(imgSrc);
+              
+            });
+            
+            // Redirect to the search results page with the search query, titles, and image sources as parameters
+            window.location.href = '/HTML/result.html?q=' + encodeURIComponent(filter)
+              + '&titles=' + encodeURIComponent(JSON.stringify(titles)) 
+              + '&aHerfs=' + encodeURIComponent(JSON.stringify(aHerfs))
+              + '&imageSrcs=' + encodeURIComponent(JSON.stringify(imageSrcs));
+          }
+</script>
+        
+
+      </div> 
+      </div> 
+      <footer>
         <p>&copy; 2024 WorkHard. All rights reserved.</p>
-    </footer>
+      </footer>
 
-    <script src="/script.js"></script>
+        <script src="/script.js"></script>
+
+
+
+        
+
+       
 
 </body>
 </html>
